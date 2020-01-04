@@ -34,7 +34,7 @@ const ContactUs = () => {
               />
             </div>
             <div className="email-input">
-              <label htmlFor="mail-ip">Mail</label>
+              <label htmlFor="mail-ip">Email</label>
               <span>*</span>
               <br />
               <input

@@ -26,8 +26,15 @@ module.exports = {
         display: `minimal-ui`,
       },
     },
+    {
+      resolve: "gatsby-plugin-mailchimp",
+      options: {
+        endpoint:
+          "https://ebgifts.us4.list-manage.com/subscribe/post?u=a313061d84ff525d7d2572bd1&amp;id=d58ddf15d9",
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};

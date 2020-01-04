@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "gatsby";
 import Logo from "../../../assets/images/logo.png";
 import FacebookIcon from "../../../assets/images/facebook-black.png";
 import InstagramIcon from "../../../assets/images/instagram-black.png";
+import addToMailchimp from "gatsby-plugin-mailchimp";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+
+  const onChange = e => setEmail(e.currentTarget.value);
+
+  const onSubmit = async e => {
+    e.preventDefault();
+    const res = await addToMailchimp(email);
+    console.log(res);
+  };
+
   return (
     <footer>
       <div className="footer-top">
@@ -61,10 +72,11 @@ const Footer = () => {
               Sign up for our mailing list to get lastest <br />
               updates and offers
             </p>
-            <form>
+            <form onSubmit={onSubmit}>
               <input
                 type="text"
-                name="input-mail"
+                name="email"
+                onChange={onChange}
                 placeholder="Your mail here"
               />
               <button type="submit">Subscribe</button>
