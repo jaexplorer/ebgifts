@@ -42,11 +42,15 @@ const ContactUs = () => {
             </div>
           </div>
           <div className="form-messagefield">
-            <label htmlFor="text">
+            <label htmlFor="message-ip">
               What's on your mind?<span>*</span>
             </label>
             <br />
-            <textarea placeholder="Write your message here..."></textarea>
+            <textarea
+              id="message-ip"
+              name="input-message"
+              placeholder="Write your message here..."
+            ></textarea>
           </div>
           <button type="submit">Send message</button>
         </form>
