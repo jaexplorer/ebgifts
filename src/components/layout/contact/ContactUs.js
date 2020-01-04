@@ -44,8 +44,6 @@ const ContactUs = () => {
               <input
                 type="text"
                 name="name"
-                value={name}
-                onChange={onChange}
                 id="name-ip"
                 placeholder="Mark Stevens"
               />
@@ -57,7 +55,6 @@ const ContactUs = () => {
               <input
                 type="text"
                 name="email"
-                value={email}
                 onChange={onChange}
                 id="mail-ip"
                 placeholder="mark@gmail.com"
@@ -71,8 +68,6 @@ const ContactUs = () => {
             <textarea
               id="message-ip"
               name="message"
-              value={message}
-              onChange={onChange}
               placeholder="Write your message here..."
             ></textarea>
           </div>
