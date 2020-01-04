@@ -1,0 +1,126 @@
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10rem;
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    h1 {
+      font-family: Poppins;
+      font-weight: 600;
+      font-size: 2rem;
+      color: black;
+      text-align: center;
+      margin-bottom: 5px;
+    }
+
+    h2 {
+      font-family: Poppins;
+      font-weight: 400;
+      font-size: 1.4rem;
+      color: black;
+      text-align: center;
+      margin-top: 0;
+    }
+
+    img {
+      height: 5rem;
+      margin-bottom: 2rem;
+    }
+
+    &:nth-child(1) {
+      background-color: #f5e7e6;
+    }
+    &:nth-child(2) {
+      background-color: #f4f4f4;
+      margin-left: 3rem;
+    }
+    &:nth-child(3) {
+      background-color: #dce7ed;
+      margin-left: 3rem;
+    }
+  }
+}
+
+.contact-us {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10rem;
+  .contact-us-form {
+    width: 100%;
+    margin-left: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h1 {
+      font-family: Abril Fatface;
+      font-weight: 400;
+      font-size: 2.4rem;
+      color: black;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+
+    form {
+      label {
+        font-family: Poppins;
+        font-weight: 600;
+        font-size: 18px;
+        color: black;
+      }
+      span {
+        color: red;
+      }
+
+      input {
+        box-shadow: none;
+        border: 1px solid #ddd;
+        width: 100%;
+        background: #fff;
+        padding: 1rem 1.6rem;
+        padding-left: 2rem;
+        margin-top: 1rem;
+        font-size: 1.1rem;
+      }
+      .form-inputgroup {
+        display: flex;
+        width: 100%;
+
+        .name-input {
+          width: 100%;
+        }
+
+        .email-input {
+          width: 100%;
+          margin-left: 3rem;
+        }
+      }
+
+      .form-messagefield {
+        margin-top: 3rem;
+        width: 100%;
+
+        textarea {
+          margin-top: 1rem;
+          font-size: 1.1rem;
+
+          width: 100%;
+          border-radius: 0;
+          box-shadow: none;
+          padding-left: 20px;
+          border: 1px solid #ddd;
+          background: #fff;
+          height: 130px;
+          resize: none;
+          padding: 10px 20px;
+        }
+      }
+    }
+  }
+}

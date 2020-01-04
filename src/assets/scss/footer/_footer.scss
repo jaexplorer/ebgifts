@@ -1,0 +1,203 @@
+footer {
+  background-image: url("../../images/BG-footer.png");
+  background-position: -288px -335px;
+  height: 855px;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    padding-right: 5rem;
+    padding-left: 5rem;
+    width: 100%;
+    margin: auto;
+    margin-top: auto;
+    margin-bottom: 6rem;
+    max-width: 1500px;
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 600px;
+
+      .links {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .links-col {
+          position: relative;
+          padding-right: 2.5rem;
+          padding-left: 1.5rem;
+          h3 {
+            font-family: "Abril Fatface";
+            font-weight: 400;
+            font-size: 1.5rem;
+            color: black;
+            padding-bottom: 3rem;
+          }
+          ul {
+            padding: 0;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            li {
+              list-style-type: none;
+              padding-bottom: 1.5rem;
+              a {
+                position: relative;
+                font-weight: 400;
+                font-size: 1.1rem;
+                color: grey;
+                text-decoration: none;
+
+                &:before {
+                  content: "";
+                  position: absolute;
+                  bottom: -0.4rem;
+                  left: -0.4rem;
+                  width: 2.5rem;
+                  height: 2px;
+                  background: black;
+                  z-index: 2000;
+                  transition: all 0.3s ease;
+                  opacity: 0;
+                }
+                &:hover {
+                  color: black;
+                  &::before {
+                    left: 0;
+                    opacity: 1;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .links-social {
+        padding-left: 1.5rem;
+        font-size: 1rem;
+
+        span {
+          padding-right: 1rem;
+
+          img {
+            height: 1rem;
+            cursor: pointer;
+
+            &:hover {
+              opacity: 0.5;
+            }
+          }
+        }
+      }
+    }
+    .footer-newsletter {
+      .form-new {
+        background-image: url("../../images/new-letter.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: max-content;
+        padding: 3.5rem;
+        padding-right: 16rem;
+        h1 {
+          margin-bottom: 10px;
+          font-family: Abril Fatface;
+          font-weight: 400;
+          font-size: 2.4rem;
+          color: black;
+        }
+        p {
+          font-weight: 400;
+          font-size: 1rem;
+          color: grey;
+          padding-bottom: 1rem;
+        }
+        form {
+          input {
+            border-radius: 0;
+            box-shadow: none;
+            border: 1px solid black;
+            font-family: Poppins;
+            font-weight: 400;
+            font-size: 14px;
+            color: grey;
+            padding: 1rem 1.5rem;
+            width: 24rem;
+          }
+
+          button {
+            display: block;
+            background: black;
+            font-family: Abril Fatface;
+            font-weight: 400;
+            font-size: 18px;
+            color: white;
+            padding: 10px 40px;
+            background-color: black;
+            border: 1px solid black;
+            background-image: linear-gradient(90deg, black 50%, white 50%);
+            background-size: 600px;
+            background-repeat: no-repeat;
+            background-position: 0%;
+            transition: all 0.3s ease-in-out;
+            margin-top: 1rem;
+
+            &:hover {
+              background-position: 100%;
+              color: black;
+            }
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(136, 136, 136, 0.15);
+    width: 100%;
+
+    .footer-container {
+      display: flex;
+      border-top: 1px solid rgba(136, 136, 136, 0.15);
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+      padding: 2rem;
+      padding-right: 5rem;
+      padding-left: 5rem;
+      margin: auto;
+      max-width: 1500px;
+      .footer-logo {
+        img {
+          height: 4rem;
+        }
+      }
+
+      .footer-copywrite {
+        font-weight: 300;
+        font-size: 1rem;
+      }
+
+      .footer-email {
+        font-weight: 300;
+        font-size: 1rem;
+        color: grey;
+
+        span {
+          color: black;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}

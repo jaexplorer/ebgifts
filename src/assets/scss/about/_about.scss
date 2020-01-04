@@ -1,0 +1,251 @@
+.about-intro {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10rem;
+
+  .welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 4rem;
+    .author-container {
+      display: flex;
+      margin-bottom: 1rem;
+      .author-pic {
+        height: 10rem;
+        width: 10rem;
+        border-radius: 50%;
+        border: #f5e7e6 4px solid;
+        overflow: hidden;
+        margin-right: 3rem;
+        flex-shrink: 0;
+
+        img {
+          object-fit: cover;
+          object-position: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .author-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        h1 {
+          font-family: Poppins;
+          font-weight: 400;
+          font-size: 1.4rem;
+          color: #4e4e4e;
+        }
+
+        h2 {
+          font-family: Abril Fatface;
+          font-weight: 400;
+          font-size: 2.2rem;
+          color: black;
+          margin-top: 0;
+        }
+      }
+    }
+
+    p {
+    }
+
+    .links-social {
+      font-size: 1rem;
+
+      span {
+        padding-right: 1rem;
+
+        img {
+          height: 1rem;
+          cursor: pointer;
+
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+
+  .img-about {
+  }
+}
+
+.feedback {
+  margin-bottom: 10rem;
+  .feedback-title {
+    h1 {
+      font-family: Abril Fatface;
+      font-weight: 400;
+      font-size: 60px;
+      color: black;
+      text-align: center;
+    }
+    h2 {
+      font-family: Abril Fatface;
+      font-weight: 400;
+      font-size: 200px;
+      color: black;
+      text-align: center;
+      transform: rotate(180deg);
+      margin: 50px 0 -100px 0;
+    }
+  }
+  .feedback-customer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+      font-family: Poppins;
+      font-weight: 400;
+      font-size: 14px;
+      color: #b7b7b7;
+      text-align: center;
+      width: 70%;
+    }
+
+    img {
+      height: 6rem;
+      width: 6rem;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 50%;
+      border: #f5e7e6 3px solid;
+      overflow: hidden;
+      margin-top: 2rem;
+    }
+
+    .customer-name {
+      margin-top: 1em;
+
+      span {
+        &:first-child {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.services {
+  width: 100%;
+  h1 {
+    font-family: Abril Fatface;
+    font-weight: 400;
+    font-size: 5rem;
+    color: black;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  h2 {
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: black;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .services-container {
+    width: 100%;
+    position: relative;
+
+    & > img {
+      width: 100%;
+    }
+
+    .services-content {
+      position: absolute;
+      width: 100%;
+      top: 10rem;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      .service {
+        width: 100%;
+        margin-left: 3rem;
+
+        &:first-child {
+          margin-left: 0;
+        }
+        div {
+          width: 100%;
+          height: 500px;
+          background-color: #f4f4f4;
+        }
+
+        h2 {
+        }
+      }
+    }
+  }
+}
+
+.seemore-wrapper {
+  h1 {
+    font-family: Abril Fatface;
+    font-weight: 400;
+    font-size: 5rem;
+    color: black;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  .seemore-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10rem;
+    margin-top: 5rem;
+
+    .seemore-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+
+      h1 {
+        font-family: Poppins;
+        font-weight: 600;
+        font-size: 2rem;
+        color: black;
+        text-align: center;
+        margin-bottom: 5px;
+      }
+
+      h2 {
+        font-family: Poppins;
+        font-weight: 400;
+        font-size: 1.4rem;
+        color: black;
+        text-align: center;
+        margin-top: 0;
+      }
+
+      img {
+        height: 5rem;
+        margin-bottom: 2rem;
+      }
+
+      &:nth-child(1) {
+        background-color: #f5e7e6;
+      }
+      &:nth-child(2) {
+        background-color: #f4f4f4;
+        margin-left: 3rem;
+      }
+      &:nth-child(3) {
+        background-color: #dce7ed;
+        margin-left: 3rem;
+      }
+    }
+  }
+}

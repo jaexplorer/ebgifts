@@ -1,0 +1,44 @@
+.faq-container {
+  margin-bottom: 10rem;
+
+  .faq-subject {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 3rem;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    h1 {
+      font-family: Poppins;
+      font-weight: 500;
+      font-size: 2.2rem;
+      color: black;
+      margin-bottom: 1.8rem;
+      margin-top: 3rem;
+    }
+
+    .faq-wrapper {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-gap: 3rem;
+
+      .faq-content {
+        h2 {
+          font-family: Poppins;
+          font-weight: 400;
+          font-size: 1.4rem;
+          color: black;
+          margin-bottom: 1rem;
+        }
+        p {
+          font-family: Poppins;
+          font-weight: 400;
+          font-size: 1.1rem;
+          color: #949494;
+          margin-bottom: 3rem;
+        }
+      }
+    }
+  }
+}
