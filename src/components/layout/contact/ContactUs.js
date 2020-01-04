@@ -1,21 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import ContactUsImg from "../../../assets/images/img-contact.jpg";
 
 const ContactUs = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const { name, email, message } = formData;
-
-  const onChange = e =>
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-
   return (
     <div className="contact-us container">
       <img src={ContactUsImg} alt="" />
@@ -33,7 +19,7 @@ const ContactUs = () => {
           <input
             type="hidden"
             name="subject"
-            value={`${email} has sent a message from ebgifts.com.au`}
+            value="Recieved a message from ebgifts.com.au"
           />
 
           <div className="form-inputgroup">
@@ -55,7 +41,6 @@ const ContactUs = () => {
               <input
                 type="text"
                 name="email"
-                onChange={onChange}
                 id="mail-ip"
                 placeholder="mark@gmail.com"
               />
