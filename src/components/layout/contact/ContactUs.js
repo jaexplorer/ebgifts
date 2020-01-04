@@ -7,7 +7,14 @@ const ContactUs = () => {
       <img src={ContactUsImg} alt="" />
       <div className="contact-us-form">
         <h1>Send us a message</h1>
-        <form action="post">
+        <form
+          name="contact"
+          method="post"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+        >
+          <input type="hidden" name="bot-field" />
+          <input type="hidden" name="form-name" value="contact" />
           <div className="form-inputgroup">
             <div className="name-input">
               <label htmlFor="name-ip">
