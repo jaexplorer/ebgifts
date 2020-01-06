@@ -1,13 +1,26 @@
-import React from "react"
-import { Link } from "gatsby"
-import HeroImg from "../../../assets/images/slider-1.png"
-import Pattern from "../../../assets/images/Pattern.png"
+import React from "react";
+import { Link } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
+import Pattern from "../../../assets/images/Pattern.png";
 
 const Hero = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      HeroImg: file(relativePath: { eq: "slider-1.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 2000) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `);
+
   return (
     <div className="hero-container">
       <div className="hero-img">
-        <img src={HeroImg} alt="" />
+        <Img fluid={data.HeroImg.childImageSharp.fluid} />
       </div>
       <div className="hero-banner">
         <h3>EXPLORE THE</h3>
@@ -20,7 +33,7 @@ const Hero = () => {
         <Link to="/shop">Shop now</Link>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

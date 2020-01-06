@@ -1,10 +1,23 @@
 import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
 import AuthorPic from "../../../assets/images/author.jpg";
 import FacebookIcon from "../../../assets/images/facebook-black.png";
 import InstagramIcon from "../../../assets/images/instagram-black.png";
-import AboutPic from "../../../assets/images/img-about.jpg";
 
 const Intro = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      AboutPic: file(relativePath: { eq: "img-about.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 500, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `);
+
   return (
     <div className="about-intro container">
       <div className="welcome">
@@ -38,7 +51,7 @@ const Intro = () => {
         </div>
       </div>
       <div className="img-about">
-        <img src={AboutPic} alt="" />
+        <Img fluid={data.AboutPic.childImageSharp.fluid} />
       </div>
     </div>
   );

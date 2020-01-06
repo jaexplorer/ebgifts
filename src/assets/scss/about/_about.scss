@@ -8,6 +8,7 @@
     flex-direction: column;
     justify-content: space-between;
     margin-right: 4rem;
+    width: 100%;
     .author-container {
       display: flex;
       margin-bottom: 1rem;
@@ -72,6 +73,7 @@
   }
 
   .img-about {
+    width: 100%;
   }
 }
 

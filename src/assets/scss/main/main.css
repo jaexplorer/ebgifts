@@ -642,6 +642,7 @@ footer .footer-bottom .footer-container .footer-email span {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-right: 4rem;
+  width: 100%;
 }
 
 .about-intro .welcome .author-container {
@@ -714,6 +715,10 @@ footer .footer-bottom .footer-container .footer-email span {
 
 .about-intro .welcome .links-social span img:hover {
   opacity: 0.5;
+}
+
+.about-intro .img-about {
+  width: 100%;
 }
 
 .feedback {
@@ -988,6 +993,10 @@ footer .footer-bottom .footer-container .footer-email span {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 10rem;
+}
+
+.contact-us .contact-us-img {
+  width: 100%;
 }
 
 .contact-us .contact-us-form {

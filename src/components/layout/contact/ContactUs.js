@@ -1,10 +1,25 @@
 import React from "react";
-import ContactUsImg from "../../../assets/images/img-contact.jpg";
+import Img from "gatsby-image";
+import { useStaticQuery, graphql } from "gatsby";
 
 const ContactUs = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      ContactUsImg: file(relativePath: { eq: "img-contact.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 500, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `);
+
   return (
     <div className="contact-us container">
-      <img src={ContactUsImg} alt="" />
+      <div className="contact-us-img">
+        <Img fluid={data.ContactUsImg.childImageSharp.fluid} />
+      </div>
       <div className="contact-us-form">
         <h1>Send us a message</h1>
         <form

@@ -14,6 +14,8 @@ const Footer = () => {
     e.preventDefault();
     const res = await addToMailchimp(email);
     console.log(res);
+    // result: string; // either `success` or `error` (helpful to use this key to update your state)
+    // msg: string; // a user-friendly message indicating details of your submissions (usually something like "thanks for subscribing!" or "this email has already been added")
   };
 
   return (

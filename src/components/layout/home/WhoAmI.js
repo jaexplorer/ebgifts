@@ -1,11 +1,24 @@
 import React from "react";
-import WhoAmIBG from "../../../assets/images/who.png";
+import { useStaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
 import Me from "../../../assets/images/author.jpg";
 
 const WhoAmI = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      WhoAmIBG: file(relativePath: { eq: "who.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 2000) {
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          }
+        }
+      }
+    }
+  `);
+
   return (
     <div className="whoami">
-      <img src={WhoAmIBG} alt="" />
+      <Img fluid={data.WhoAmIBG.childImageSharp.fluid} />
       <div className="who-content">
         <div className="who">
           <h1>who am i ?</h1>

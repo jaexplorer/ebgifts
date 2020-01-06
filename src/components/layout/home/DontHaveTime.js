@@ -1,10 +1,23 @@
 import React from "react";
-import TimePic from "../../../assets/images/counter.png";
+import { useStaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
 
 const DontHaveTime = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      TimePic: file(relativePath: { eq: "counter.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 2000) {
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          }
+        }
+      }
+    }
+  `);
+
   return (
     <div className="donthavetime">
-      <img src={TimePic} alt="" />
+      <Img fluid={data.TimePic.childImageSharp.fluid} />{" "}
       <div className="donthavetime-content">
         <h1>Don't have time ?</h1>
         <p>

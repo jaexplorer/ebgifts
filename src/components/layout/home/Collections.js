@@ -1,14 +1,27 @@
 import React from "react";
-import CollectionPic from "../../../assets/images/collection.png";
+import { useStaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
 
 const Collections = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      CollectionPic: file(relativePath: { eq: "collection.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 2000) {
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          }
+        }
+      }
+    }
+  `);
+
   return (
     <div className="collections container">
       <h1>What we do</h1>
       <h2>- All Category of EbGifts -</h2>
       <div className="collections-wrapper">
         <div className="calltoaction">
-          <img src={CollectionPic} alt="" />
+          <Img fluid={data.CollectionPic.childImageSharp.fluid} />
           <div className="content">
             <h2>HELLO SUMMER</h2>
             <h1>Free Delivery</h1>
