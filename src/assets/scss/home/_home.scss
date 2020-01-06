@@ -294,7 +294,7 @@
   .feed-container {
     margin-top: 10rem;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto;
     grid-gap: 3rem;
     width: 100%;
 
@@ -334,7 +334,7 @@
 @media screen and (max-width: 1099px) {
   .instafeed {
     .feed-container {
-      grid-template-columns: auto auto;
+      grid-template-columns: auto auto auto;
       grid-gap: 1rem;
     }
   }
@@ -369,7 +369,7 @@
 
   .instafeed {
     .feed-container {
-      grid-template-columns: auto;
+      grid-template-columns: auto auto;
       grid-gap: 1rem;
     }
   }

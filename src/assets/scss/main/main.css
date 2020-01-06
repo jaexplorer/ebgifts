@@ -1628,8 +1628,8 @@ footer .footer-bottom .footer-container .footer-email span {
   margin-top: 10rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto auto;
-      grid-template-columns: auto auto auto;
+  -ms-grid-columns: auto auto auto auto;
+      grid-template-columns: auto auto auto auto;
   grid-gap: 3rem;
   width: 100%;
 }
@@ -1673,8 +1673,8 @@ footer .footer-bottom .footer-container .footer-email span {
 
 @media screen and (max-width: 1099px) {
   .instafeed .feed-container {
-    -ms-grid-columns: auto auto;
-        grid-template-columns: auto auto;
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
     grid-gap: 1rem;
   }
 }
@@ -1696,8 +1696,8 @@ footer .footer-bottom .footer-container .footer-email span {
     margin-top: 2rem;
   }
   .instafeed .feed-container {
-    -ms-grid-columns: auto;
-        grid-template-columns: auto;
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
     grid-gap: 1rem;
   }
 }
