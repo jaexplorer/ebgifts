@@ -16,6 +16,12 @@ const Layout = ({ children }) => {
           href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700"
           rel="stylesheet"
         />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta
+          name="apple-mobile-web-app-status-bar-style"
+          content="black-translucent"
+        />
+        <meta name="theme-color" content="#ffffff" />
       </Helmet>
       <Navbar />
       {children}
