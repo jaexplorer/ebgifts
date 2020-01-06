@@ -3,7 +3,7 @@
   position: relative;
   margin-bottom: 10rem;
 
-  & > img {
+  .whoami-img {
     width: 100%;
   }
 
@@ -36,46 +36,44 @@
         margin-top: 1.5rem;
       }
     }
-  }
-
-  p {
-    width: 50%;
-    text-align: center;
-    margin-top: -2rem;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .me {
-    display: flex;
-    align-items: center;
-    align-self: center;
-    margin-left: 25%;
-    margin-top: 10rem;
-
-    .author-pic {
-      height: 8rem;
-      width: 8rem;
-      border-radius: 50%;
-      border: #f5e7e6 4px solid;
-      overflow: hidden;
-      margin-right: 3rem;
-      flex-shrink: 0;
-
-      img {
-        object-fit: cover;
-        object-position: cover;
-        width: 100%;
-        height: 100%;
-      }
+    p {
+      width: 50%;
+      text-align: center;
+      margin-top: -2rem;
+      margin-left: auto;
+      margin-right: auto;
     }
-
-    .info {
+    .me {
       display: flex;
-      flex-direction: column;
+      align-items: center;
+      align-self: center;
+      margin-left: 25%;
+      margin-top: 10rem;
 
-      span {
-        opacity: 0.4;
+      .author-pic {
+        height: 8rem;
+        width: 8rem;
+        border-radius: 50%;
+        border: #f5e7e6 4px solid;
+        overflow: hidden;
+        margin-right: 3rem;
+        flex-shrink: 0;
+
+        img {
+          object-fit: cover;
+          object-position: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+
+        span {
+          opacity: 0.4;
+        }
       }
     }
   }
@@ -216,6 +214,62 @@
   }
 }
 
+.feedback {
+  margin-bottom: 10rem;
+  .feedback-title {
+    h1 {
+      font-family: Abril Fatface;
+      font-weight: 400;
+      font-size: 5rem;
+      color: black;
+      text-align: center;
+    }
+    h2 {
+      font-family: Abril Fatface;
+      font-weight: 400;
+      font-size: 15rem;
+      color: black;
+      text-align: center;
+      transform: rotate(180deg);
+      margin: 4rem 0 -10rem 0;
+    }
+  }
+  .feedback-customer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+      font-family: Poppins;
+      font-weight: 400;
+      font-size: 1.2rem;
+      color: #b7b7b7;
+      text-align: center;
+      width: 70%;
+    }
+
+    img {
+      height: 6rem;
+      width: 6rem;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 50%;
+      border: #f5e7e6 3px solid;
+      overflow: hidden;
+      margin-top: 2rem;
+    }
+
+    .customer-name {
+      margin-top: 1em;
+
+      span {
+        &:first-child {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
 .instafeed {
   width: 100%;
   margin-bottom: 10rem;
@@ -271,6 +325,173 @@
           margin-right: 3rem;
         }
       }
+    }
+  }
+}
+
+// Small Devices
+// ---------------------------------------- //
+@media screen and (max-width: 1099px) {
+  .instafeed {
+    .feed-container {
+      grid-template-columns: auto auto;
+      grid-gap: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 899px) {
+  .whoami {
+    .who-content {
+      .who {
+        h1 {
+          font-size: 10rem;
+        }
+      }
+    }
+  }
+
+  .donthavetime {
+    .donthavetime-content {
+      bottom: 0;
+
+      h1 {
+        font-size: 3rem;
+      }
+      p {
+        width: 70%;
+      }
+      button {
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  .instafeed {
+    .feed-container {
+      grid-template-columns: auto;
+      grid-gap: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 699px) {
+  .whoami {
+    overflow: hidden;
+    height: 65rem;
+    .whoami-img {
+      width: 200%;
+      margin-left: -55%;
+    }
+    .who-content {
+      position: absolute;
+      top: 20rem;
+      bottom: unset;
+      .who {
+        h1 {
+          font-size: 8rem;
+        }
+        h2 {
+          font-size: 3rem;
+          margin-top: 1rem;
+        }
+      }
+      p {
+        margin-top: 1rem;
+        width: 80%;
+      }
+
+      .me {
+        margin-left: 0;
+        margin-top: 4rem;
+        flex-direction: column;
+        text-align: center;
+
+        .author-pic {
+          height: 6rem;
+          width: 6rem;
+          margin-right: 0rem;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+
+  .collections {
+    .collections-wrapper {
+      flex-direction: column-reverse;
+      margin-top: 5rem;
+      .calltoaction {
+        margin-left: -3rem;
+        width: calc(100% + 6rem);
+        .content {
+          h2 {
+            font-size: 2.2rem;
+          }
+          h1 {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+          }
+        }
+      }
+
+      .collections-container {
+        margin-bottom: 5rem;
+        .collection-row {
+          .collection-item {
+            div {
+              height: 20rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .donthavetime {
+    overflow: hidden;
+    .donthavetime-img {
+      width: 200%;
+      margin-left: -65%;
+    }
+
+    .donthavetime-content {
+      position: absolute;
+      top: 0;
+      left: 35%;
+      bottom: 5%;
+      right: 0;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      p {
+        width: 80%;
+      }
+    }
+  }
+
+  .feedback {
+    margin-bottom: 10rem;
+    .feedback-title {
+      h2 {
+        margin: 2rem 0 -10rem 0;
+      }
+    }
+    .feedback-customer {
+      p {
+        font-size: 1.2rem;
+        width: 90%;
+      }
+    }
+  }
+
+  .instafeed {
+    .feed-container {
+      margin-top: 5rem;
+      grid-template-columns: auto;
+      grid-gap: 1rem;
     }
   }
 }

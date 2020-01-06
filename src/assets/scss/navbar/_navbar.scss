@@ -119,3 +119,40 @@
     }
   }
 }
+
+// Small Devices
+// ---------------------------------------- //
+@media screen and (max-width: 899px) {
+  .navbar {
+    .nav-top {
+      .nav-contact {
+        padding-right: 3rem;
+        padding-left: 3rem;
+      }
+    }
+    .nav-bottom {
+      padding-right: 3rem;
+      padding-left: 3rem;
+
+      .nav-links {
+        .nav-item {
+          margin-left: 3rem;
+
+          a {
+            font-size: 1.2rem;
+          }
+        }
+        &:first-child {
+          .nav-item {
+            margin-right: 3rem;
+          }
+        }
+      }
+      .nav-logo {
+        img {
+          height: 4rem;
+        }
+      }
+    }
+  }
+}

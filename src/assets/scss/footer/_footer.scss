@@ -201,3 +201,40 @@ footer {
     }
   }
 }
+
+// Small Devices
+// ---------------------------------------- //
+@media screen and (max-width: 899px) {
+  footer {
+    .footer-top {
+      display: flex;
+      flex-direction: column;
+      padding-left: 3rem;
+      padding-right: 3rem;
+      margin-bottom: 3rem;
+
+      .footer-links {
+        max-width: 100%;
+
+        .links {
+          margin-bottom: 2rem;
+        }
+      }
+
+      .footer-newsletter {
+        margin-top: 5rem;
+        .form-new {
+          width: 100%;
+        }
+      }
+    }
+
+    .footer-bottom {
+      .footer-container {
+        padding-right: 3rem;
+        padding-left: 3rem;
+        margin: auto;
+      }
+    }
+  }
+}

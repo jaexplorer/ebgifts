@@ -18,7 +18,9 @@ const WhoAmI = () => {
 
   return (
     <div className="whoami">
-      <Img fluid={data.WhoAmIBG.childImageSharp.fluid} />
+      <div className="whoami-img">
+        <Img fluid={data.WhoAmIBG.childImageSharp.fluid} />
+      </div>
       <div className="who-content">
         <div className="who">
           <h1>who am i ?</h1>

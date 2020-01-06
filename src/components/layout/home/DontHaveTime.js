@@ -17,7 +17,9 @@ const DontHaveTime = () => {
 
   return (
     <div className="donthavetime">
-      <Img fluid={data.TimePic.childImageSharp.fluid} />{" "}
+      <div className="donthavetime-img">
+        <Img fluid={data.TimePic.childImageSharp.fluid} />
+      </div>
       <div className="donthavetime-content">
         <h1>Don't have time ?</h1>
         <p>

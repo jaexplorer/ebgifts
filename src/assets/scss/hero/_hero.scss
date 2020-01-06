@@ -11,8 +11,8 @@
     top: 15rem;
     width: 100%;
     z-index: 10;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     text-align: center;
 
     h3 {
@@ -104,6 +104,74 @@
       text-align: center;
       opacity: 0.8;
       width: 40%;
+    }
+  }
+}
+
+// Small Devices
+// ---------------------------------------- //
+@media screen and (max-width: 1099px) {
+  .hero-container {
+    overflow: hidden;
+    .hero-img {
+      width: 150%;
+      margin-left: -25%;
+    }
+    .hero-banner {
+      top: 15rem;
+
+      h3 {
+        font-size: 2.5rem;
+        font-weight: 400;
+      }
+      h1 {
+        font-family: "Abril Fatface";
+        font-size: 6rem;
+        font-weight: 400;
+      }
+      p {
+        width: 70%;
+        margin: auto;
+      }
+    }
+  }
+}
+@media screen and (max-width: 699px) {
+  .hero-container {
+    overflow: hidden;
+    .hero-img {
+      width: 200%;
+      margin-left: -60%;
+    }
+    .hero-banner {
+      top: 12rem;
+
+      h3 {
+        font-size: 2.5rem;
+        font-weight: 400;
+      }
+      h1 {
+        font-family: "Abril Fatface";
+        font-size: 6rem;
+        font-weight: 400;
+      }
+      p {
+        width: 70%;
+        margin: auto;
+      }
+    }
+  }
+
+  .banner {
+    padding-left: 0rem !important;
+    padding-right: 0rem !important;
+    height: max-content;
+    margin-top: 13rem;
+
+    .banner-content {
+      p {
+        width: 60%;
+      }
     }
   }
 }

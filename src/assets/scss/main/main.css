@@ -44,9 +44,9 @@ button {
   background: black;
   font-family: Abril Fatface;
   font-weight: 400;
-  font-size: 18px;
   color: white;
-  padding: 10px 40px;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
   background-color: black;
   border: 1px solid black;
   background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, black), color-stop(50%, white));
@@ -66,6 +66,13 @@ button {
 button:hover {
   background-position: 100%;
   color: black;
+}
+
+@media screen and (max-width: 1099px) {
+  .container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 }
 
 @media (max-height: 598px) {
@@ -249,6 +256,29 @@ button:hover {
   height: 6rem;
 }
 
+@media screen and (max-width: 899px) {
+  .navbar .nav-top .nav-contact {
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+  .navbar .nav-bottom {
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+  .navbar .nav-bottom .nav-links .nav-item {
+    margin-left: 3rem;
+  }
+  .navbar .nav-bottom .nav-links .nav-item a {
+    font-size: 1.2rem;
+  }
+  .navbar .nav-bottom .nav-links:first-child .nav-item {
+    margin-right: 3rem;
+  }
+  .navbar .nav-bottom .nav-logo img {
+    height: 4rem;
+  }
+}
+
 .hero-container {
   width: 100%;
   margin-bottom: 10rem;
@@ -263,8 +293,8 @@ button:hover {
   top: 15rem;
   width: 100%;
   z-index: 10;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   text-align: center;
 }
 
@@ -374,6 +404,69 @@ button:hover {
   text-align: center;
   opacity: 0.8;
   width: 40%;
+}
+
+@media screen and (max-width: 1099px) {
+  .hero-container {
+    overflow: hidden;
+  }
+  .hero-container .hero-img {
+    width: 150%;
+    margin-left: -25%;
+  }
+  .hero-container .hero-banner {
+    top: 15rem;
+  }
+  .hero-container .hero-banner h3 {
+    font-size: 2.5rem;
+    font-weight: 400;
+  }
+  .hero-container .hero-banner h1 {
+    font-family: "Abril Fatface";
+    font-size: 6rem;
+    font-weight: 400;
+  }
+  .hero-container .hero-banner p {
+    width: 70%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 699px) {
+  .hero-container {
+    overflow: hidden;
+  }
+  .hero-container .hero-img {
+    width: 200%;
+    margin-left: -60%;
+  }
+  .hero-container .hero-banner {
+    top: 12rem;
+  }
+  .hero-container .hero-banner h3 {
+    font-size: 2.5rem;
+    font-weight: 400;
+  }
+  .hero-container .hero-banner h1 {
+    font-family: "Abril Fatface";
+    font-size: 6rem;
+    font-weight: 400;
+  }
+  .hero-container .hero-banner p {
+    width: 70%;
+    margin: auto;
+  }
+  .banner {
+    padding-left: 0rem !important;
+    padding-right: 0rem !important;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    margin-top: 13rem;
+  }
+  .banner .banner-content p {
+    width: 60%;
+  }
 }
 
 footer {
@@ -620,6 +713,38 @@ footer .footer-bottom .footer-container .footer-email span {
   font-weight: 400;
 }
 
+@media screen and (max-width: 899px) {
+  footer .footer-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin-bottom: 3rem;
+  }
+  footer .footer-top .footer-links {
+    max-width: 100%;
+  }
+  footer .footer-top .footer-links .links {
+    margin-bottom: 2rem;
+  }
+  footer .footer-top .footer-newsletter {
+    margin-top: 5rem;
+  }
+  footer .footer-top .footer-newsletter .form-new {
+    width: 100%;
+  }
+  footer .footer-bottom .footer-container {
+    padding-right: 3rem;
+    padding-left: 3rem;
+    margin: auto;
+  }
+}
+
 .about-intro {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -721,72 +846,6 @@ footer .footer-bottom .footer-container .footer-email span {
   width: 100%;
 }
 
-.feedback {
-  margin-bottom: 10rem;
-}
-
-.feedback .feedback-title h1 {
-  font-family: Abril Fatface;
-  font-weight: 400;
-  font-size: 60px;
-  color: black;
-  text-align: center;
-}
-
-.feedback .feedback-title h2 {
-  font-family: Abril Fatface;
-  font-weight: 400;
-  font-size: 200px;
-  color: black;
-  text-align: center;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  margin: 50px 0 -100px 0;
-}
-
-.feedback .feedback-customer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.feedback .feedback-customer p {
-  font-family: Poppins;
-  font-weight: 400;
-  font-size: 14px;
-  color: #b7b7b7;
-  text-align: center;
-  width: 70%;
-}
-
-.feedback .feedback-customer img {
-  height: 6rem;
-  width: 6rem;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  border-radius: 50%;
-  border: #f5e7e6 3px solid;
-  overflow: hidden;
-  margin-top: 2rem;
-}
-
-.feedback .feedback-customer .customer-name {
-  margin-top: 1em;
-}
-
-.feedback .feedback-customer .customer-name span:first-child {
-  font-weight: bold;
-}
-
 .services {
   width: 100%;
 }
@@ -845,7 +904,7 @@ footer .footer-bottom .footer-container .footer-email span {
 
 .services .services-container .services-content .service div {
   width: 100%;
-  height: 500px;
+  height: 30vw;
   background-color: #f4f4f4;
 }
 
@@ -920,6 +979,79 @@ footer .footer-bottom .footer-container .footer-email span {
 .seemore-wrapper .seemore-info .seemore-container:nth-child(3) {
   background-color: #dce7ed;
   margin-left: 3rem;
+}
+
+@media screen and (max-width: 899px) {
+  .about-intro {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about-intro .welcome {
+    margin-bottom: 5rem;
+  }
+  .about-intro .welcome .author-container {
+    margin-bottom: 2rem;
+  }
+  .about-intro .welcome .author-container .author-info h1 {
+    font-size: 1rem;
+  }
+  .about-intro .welcome .author-container .author-info h2 {
+    font-size: 2rem;
+  }
+  .about-intro .welcome .links-social {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
+  .about-intro .welcome .links-social span {
+    padding-right: 3rem;
+  }
+  .about-intro .welcome .links-social span img {
+    height: 1.1rem;
+  }
+  .about-intro .img-about {
+    width: 100%;
+  }
+  .services .services-container {
+    width: 100%;
+    position: relative;
+  }
+  .services .services-container > img {
+    width: 100%;
+  }
+  .services .services-container .services-content {
+    position: relative;
+    width: 100%;
+    top: -20rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .services .services-container .services-content .service {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 4rem;
+  }
+  .services .services-container .services-content .service:first-child {
+    margin-left: 0;
+  }
+  .services .services-container .services-content .service div {
+    width: 100%;
+    height: 300px;
+    background-color: #f4f4f4;
+  }
 }
 
 .contact-info {
@@ -1082,13 +1214,46 @@ footer .footer-bottom .footer-container .footer-email span {
   padding: 10px 20px;
 }
 
+@media screen and (max-width: 899px) {
+  .contact-us {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact-us .contact-us-form {
+    margin-top: 3rem;
+    margin-left: 0rem;
+  }
+}
+
+@media screen and (max-width: 699px) {
+  .contact-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact-info .contact-container:nth-child(2) {
+    margin-left: 0rem;
+    margin-top: 3rem;
+  }
+  .contact-info .contact-container:nth-child(3) {
+    margin-left: 0rem;
+    margin-top: 3rem;
+  }
+}
+
 .whoami {
   width: 100%;
   position: relative;
   margin-bottom: 10rem;
 }
 
-.whoami > img {
+.whoami .whoami-img {
   width: 100%;
 }
 
@@ -1139,7 +1304,7 @@ footer .footer-bottom .footer-container .footer-email span {
   margin-top: 1.5rem;
 }
 
-.whoami p {
+.whoami .who-content p {
   width: 50%;
   text-align: center;
   margin-top: -2rem;
@@ -1147,7 +1312,7 @@ footer .footer-bottom .footer-container .footer-email span {
   margin-right: auto;
 }
 
-.whoami .me {
+.whoami .who-content .me {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1160,7 +1325,7 @@ footer .footer-bottom .footer-container .footer-email span {
   margin-top: 10rem;
 }
 
-.whoami .me .author-pic {
+.whoami .who-content .me .author-pic {
   height: 8rem;
   width: 8rem;
   border-radius: 50%;
@@ -1171,7 +1336,7 @@ footer .footer-bottom .footer-container .footer-email span {
       flex-shrink: 0;
 }
 
-.whoami .me .author-pic img {
+.whoami .who-content .me .author-pic img {
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: cover;
@@ -1180,7 +1345,7 @@ footer .footer-bottom .footer-container .footer-email span {
   height: 100%;
 }
 
-.whoami .me .info {
+.whoami .who-content .me .info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1190,7 +1355,7 @@ footer .footer-bottom .footer-container .footer-email span {
           flex-direction: column;
 }
 
-.whoami .me .info span {
+.whoami .who-content .me .info span {
   opacity: 0.4;
 }
 
@@ -1370,6 +1535,72 @@ footer .footer-bottom .footer-container .footer-email span {
   margin-top: 4rem;
 }
 
+.feedback {
+  margin-bottom: 10rem;
+}
+
+.feedback .feedback-title h1 {
+  font-family: Abril Fatface;
+  font-weight: 400;
+  font-size: 5rem;
+  color: black;
+  text-align: center;
+}
+
+.feedback .feedback-title h2 {
+  font-family: Abril Fatface;
+  font-weight: 400;
+  font-size: 15rem;
+  color: black;
+  text-align: center;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  margin: 4rem 0 -10rem 0;
+}
+
+.feedback .feedback-customer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.feedback .feedback-customer p {
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #b7b7b7;
+  text-align: center;
+  width: 70%;
+}
+
+.feedback .feedback-customer img {
+  height: 6rem;
+  width: 6rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 50%;
+  border: #f5e7e6 3px solid;
+  overflow: hidden;
+  margin-top: 2rem;
+}
+
+.feedback .feedback-customer .customer-name {
+  margin-top: 1em;
+}
+
+.feedback .feedback-customer .customer-name span:first-child {
+  font-weight: bold;
+}
+
 .instafeed {
   width: 100%;
   margin-bottom: 10rem;
@@ -1438,6 +1669,147 @@ footer .footer-bottom .footer-container .footer-email span {
   font-weight: 300;
   font-size: 1.1rem;
   margin-right: 3rem;
+}
+
+@media screen and (max-width: 1099px) {
+  .instafeed .feed-container {
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+    grid-gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 899px) {
+  .whoami .who-content .who h1 {
+    font-size: 10rem;
+  }
+  .donthavetime .donthavetime-content {
+    bottom: 0;
+  }
+  .donthavetime .donthavetime-content h1 {
+    font-size: 3rem;
+  }
+  .donthavetime .donthavetime-content p {
+    width: 70%;
+  }
+  .donthavetime .donthavetime-content button {
+    margin-top: 2rem;
+  }
+  .instafeed .feed-container {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    grid-gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 699px) {
+  .whoami {
+    overflow: hidden;
+    height: 65rem;
+  }
+  .whoami .whoami-img {
+    width: 200%;
+    margin-left: -55%;
+  }
+  .whoami .who-content {
+    position: absolute;
+    top: 20rem;
+    bottom: unset;
+  }
+  .whoami .who-content .who h1 {
+    font-size: 8rem;
+  }
+  .whoami .who-content .who h2 {
+    font-size: 3rem;
+    margin-top: 1rem;
+  }
+  .whoami .who-content p {
+    margin-top: 1rem;
+    width: 80%;
+  }
+  .whoami .who-content .me {
+    margin-left: 0;
+    margin-top: 4rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .whoami .who-content .me .author-pic {
+    height: 6rem;
+    width: 6rem;
+    margin-right: 0rem;
+    margin-bottom: 1rem;
+  }
+  .collections .collections-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    margin-top: 5rem;
+  }
+  .collections .collections-wrapper .calltoaction {
+    margin-left: -3rem;
+    width: calc(100% + 6rem);
+  }
+  .collections .collections-wrapper .calltoaction .content h2 {
+    font-size: 2.2rem;
+  }
+  .collections .collections-wrapper .calltoaction .content h1 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+  }
+  .collections .collections-wrapper .collections-container {
+    margin-bottom: 5rem;
+  }
+  .collections .collections-wrapper .collections-container .collection-row .collection-item div {
+    height: 20rem;
+  }
+  .donthavetime {
+    overflow: hidden;
+  }
+  .donthavetime .donthavetime-img {
+    width: 200%;
+    margin-left: -65%;
+  }
+  .donthavetime .donthavetime-content {
+    position: absolute;
+    top: 0;
+    left: 35%;
+    bottom: 5%;
+    right: 0;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .donthavetime .donthavetime-content p {
+    width: 80%;
+  }
+  .feedback {
+    margin-bottom: 10rem;
+  }
+  .feedback .feedback-title h2 {
+    margin: 2rem 0 -10rem 0;
+  }
+  .feedback .feedback-customer p {
+    font-size: 1.2rem;
+    width: 90%;
+  }
+  .instafeed .feed-container {
+    margin-top: 5rem;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    grid-gap: 1rem;
+  }
 }
 
 .faq-container {
