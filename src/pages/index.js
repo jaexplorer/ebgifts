@@ -17,7 +17,7 @@ const IndexPage = () => (
     <Collections />
     <DontHaveTime />
     <Testimonials />
-    {/* <InstagramFeed /> */}
+    <InstagramFeed />
   </Layout>
 );
 

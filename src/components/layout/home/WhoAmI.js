@@ -1,7 +1,7 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
-import Me from "../../../assets/images/author.jpg";
+// import Me from "../../../assets/images/author.jpg";
 
 const WhoAmI = () => {
   const data = useStaticQuery(graphql`
@@ -9,6 +9,13 @@ const WhoAmI = () => {
       WhoAmIBG: file(relativePath: { eq: "who.png" }) {
         childImageSharp {
           fluid(maxWidth: 2000) {
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          }
+        }
+      }
+      Me: file(relativePath: { eq: "author.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 100) {
             ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
@@ -36,7 +43,7 @@ const WhoAmI = () => {
         </p>
         <div className="me">
           <div className="author-pic">
-            <img src={Me} alt="" />
+            <Img fluid={data.Me.childImageSharp.fluid} />
           </div>
           <div className="info">
             <h4>Elyse Barcellona</h4>
