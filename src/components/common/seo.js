@@ -9,6 +9,10 @@ function SEO({ description, title, author }) {
       <html lang="en" />
       <meta name="description" content={description} />
       <meta name="siteUrl" content="https://ebgifts.com.au" />
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=0.75"
+      ></meta>
 
       <meta property="og:type" content="article" />
       <meta property="og:title" content={title} />
