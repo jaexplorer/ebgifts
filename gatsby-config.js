@@ -1,9 +1,4 @@
 module.exports = {
-  siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-  },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
@@ -18,17 +13,20 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `EB Gifts`,
+        short_name: `EB Gifts`,
         start_url: `/`,
-        background_color: `#663399`,
+        lang: `en`,
+        description: `Can't find the time to pick up birthday or Christmas presents? Can't decide what to buy? EB Gifts provides gift buying and wrapping services for any occasion.`,
+        background_color: `#ffffff`,
         theme_color: `#ffffff`,
-        display: `minimal-ui`,
-        // this (optional) plugin enables Progressive Web App + Offline functionality
-        // To learn more, visit: https://gatsby.dev/offline
-        // `gatsby-plugin-offline`,
+        display: `standalone`,
+        orientation: `portrait`,
+        icon: `src/assets/images/fav.png`,
+        theme_color_in_head: false,
       },
     },
+    `gatsby-plugin-offline`,
     {
       resolve: "gatsby-plugin-mailchimp",
       options: {

@@ -77,13 +77,13 @@ button:hover {
 
 @media (max-height: 598px) {
   html {
-    font-size: 9px;
+    font-size: 8px;
   }
 }
 
 @media (max-width: 599px) {
   html {
-    font-size: 10px;
+    font-size: 8px;
   }
 }
 
@@ -472,7 +472,7 @@ button:hover {
 footer {
   background-image: url("../../images/BG-footer.png");
   background-position: -288px -335px;
-  height: 855px;
+  height: 85rem;
   background-repeat: no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -516,7 +516,7 @@ footer .footer-top .footer-links {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
-  max-width: 600px;
+  max-width: 40rem;
 }
 
 footer .footer-top .footer-links .links {
@@ -637,8 +637,9 @@ footer .footer-top .footer-newsletter .form-new form input {
   border: 1px solid black;
   font-family: Poppins;
   font-weight: 400;
-  font-size: 14px;
-  color: grey;
+  font-size: 1.4rem;
+  background: white;
+  color: #505050;
   padding: 1rem 1.5rem;
   width: 24rem;
 }
@@ -1717,7 +1718,7 @@ footer .footer-bottom .footer-container .footer-email span {
     bottom: unset;
   }
   .whoami .who-content .who h1 {
-    font-size: 8rem;
+    font-size: 7rem;
   }
   .whoami .who-content .who h2 {
     font-size: 3rem;
@@ -1806,9 +1807,12 @@ footer .footer-bottom .footer-container .footer-email span {
   }
   .instafeed .feed-container {
     margin-top: 5rem;
-    -ms-grid-columns: auto;
-        grid-template-columns: auto;
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
     grid-gap: 1rem;
+  }
+  .instafeed .feed-container .feedItem .item-info span {
+    margin-right: 1.5rem;
   }
 }
 

@@ -1,7 +1,7 @@
 footer {
   background-image: url("../../images/BG-footer.png");
   background-position: -288px -335px;
-  height: 855px;
+  height: 85rem;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -25,7 +25,7 @@ footer {
       flex-direction: column;
       justify-content: space-between;
       width: 100%;
-      max-width: 600px;
+      max-width: 40rem;
 
       .links {
         width: 100%;
@@ -128,8 +128,9 @@ footer {
             border: 1px solid black;
             font-family: Poppins;
             font-weight: 400;
-            font-size: 14px;
-            color: grey;
+            font-size: 1.4rem;
+            background: white;
+            color: rgb(80, 80, 80);
             padding: 1rem 1.5rem;
             width: 24rem;
           }

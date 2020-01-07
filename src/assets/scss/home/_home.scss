@@ -389,7 +389,7 @@
       bottom: unset;
       .who {
         h1 {
-          font-size: 8rem;
+          font-size: 7rem;
         }
         h2 {
           font-size: 3rem;
@@ -490,8 +490,16 @@
   .instafeed {
     .feed-container {
       margin-top: 5rem;
-      grid-template-columns: auto;
+      grid-template-columns: auto auto;
       grid-gap: 1rem;
+
+      .feedItem {
+        .item-info {
+          span {
+            margin-right: 1.5rem;
+          }
+        }
+      }
     }
   }
 }

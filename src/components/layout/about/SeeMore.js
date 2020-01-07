@@ -1,6 +1,5 @@
 import React from "react";
 import InstagramPic from "../../../assets/images/instagram-black.png";
-import DeliveryPic from "../../../assets/images/time-about.png";
 import FAQPic from "../../../assets/images/speech-bubble.png";
 
 const SeeMore = () => {
@@ -16,10 +15,6 @@ const SeeMore = () => {
           <img src={FAQPic} alt="" />
           <h1>FAQs</h1>
         </div>
-        {/* <div className="seemore-container">
-          <img src={DeliveryPic} alt="" />
-          <h1>Delivery & Returns</h1>
-        </div> */}
       </div>
     </div>
   );

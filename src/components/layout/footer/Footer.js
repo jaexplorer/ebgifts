@@ -27,10 +27,14 @@ const Footer = () => {
               <h3>About</h3>
               <ul>
                 <li>
-                  <Link to="/about">About us</Link>
+                  <Link aria-label="About me" to="/about">
+                    About us
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/work">Our Work</Link>
+                  <Link aria-label="My Instagram" to="/work">
+                    Our Work
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -38,10 +42,14 @@ const Footer = () => {
               <h3>Customer Services</h3>
               <ul>
                 <li>
-                  <Link to="/contact">Contact Us</Link>
+                  <Link aria-label="Contact Page" to="/contact">
+                    Contact Us
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/faq">FAQs</Link>
+                  <Link aria-label="Frequently Asked Questions Page" to="/faq">
+                    FAQs
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -49,10 +57,14 @@ const Footer = () => {
               <h3>Store</h3>
               <ul>
                 <li>
-                  <Link to="/shop">Shop</Link>
+                  <Link aria-label="Shopping Page" to="/shop">
+                    Shop
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/admin">Admin</Link>
+                  <Link aria-label="Admin Page" to="/admin">
+                    Admin
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -74,9 +86,13 @@ const Footer = () => {
               Sign up for our mailing list to get lastest <br />
               updates and offers
             </p>
+            <label type="hidden" htmlFor="email-ip">
+              Email Here
+            </label>
             <form onSubmit={onSubmit}>
               <input
                 type="text"
+                id="email-ip"
                 name="email"
                 onChange={onChange}
                 placeholder="Your mail here"
