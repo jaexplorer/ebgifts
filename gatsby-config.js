@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -30,8 +34,13 @@ module.exports = {
     {
       resolve: "gatsby-plugin-mailchimp",
       options: {
-        endpoint:
-          "https://ebgifts.us4.list-manage.com/subscribe/post?u=a313061d84ff525d7d2572bd1&amp;id=d58ddf15d9",
+        endpoint: process.env.MAILCHIMP_KEY,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GOOGLE_ANALYTICS_KEY,
       },
     },
   ],

@@ -77,13 +77,13 @@ button:hover {
 
 @media (max-height: 598px) {
   html {
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 
 @media (max-width: 599px) {
   html {
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 

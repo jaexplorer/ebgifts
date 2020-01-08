@@ -11,7 +11,7 @@ function SEO({ description, title, author }) {
       <meta name="siteUrl" content="https://ebgifts.com.au" />
       <meta
         name="viewport"
-        content="width=device-width, initial-scale=0.75"
+        content="width=device-width, initial-scale=0.7"
       ></meta>
 
       <meta property="og:type" content="article" />
