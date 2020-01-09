@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import Helmet from "react-helmet";
+import "../../assets/scss/main/main.css";
 import PropTypes from "prop-types";
 import Navbar from "./navbar/Navbar";
 import Footer from "./footer/Footer";

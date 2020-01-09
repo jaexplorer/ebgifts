@@ -1,0 +1,242 @@
+.product {
+  margin-top: 15rem;
+  margin-bottom: 10rem;
+  position: relative;
+
+  .pagination {
+    position: absolute;
+    top: 2.5rem;
+    a {
+      font-weight: 500;
+      font-size: 1rem;
+      color: #888888;
+      text-decoration: none;
+      margin-left: 1rem;
+
+      &:first-child {
+        margin-left: 0;
+      }
+      &:hover {
+        color: black;
+      }
+    }
+    span {
+      margin-left: 1rem;
+      color: #888888;
+      font-size: 1rem;
+
+      &:last-child {
+        color: black;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .product-wrapper {
+    padding-top: 10rem;
+    display: flex;
+    width: 100%;
+
+    .product-images {
+      display: flex;
+      flex-direction: column;
+      min-width: max-content;
+      overflow: hidden;
+
+      .main-image {
+        min-width: 38rem;
+        margin-bottom: 3rem;
+        flex-shrink: 0;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .other-images {
+        display: flex;
+        overflow: scroll;
+        width: 38rem;
+        &::-webkit-scrollbar {
+          width: 0px; /* Remove scrollbar space */
+          background: transparent; /* Optional: just make scrollbar invisible */
+        }
+
+        .img-container {
+          min-width: 12rem;
+          min-height: 12rem;
+          margin-right: 1rem;
+
+          div {
+            min-height: 12rem;
+          }
+        }
+      }
+    }
+
+    .product-info {
+      width: max-content;
+      margin-left: 2rem;
+
+      h2 {
+        line-height: 1;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+
+        s {
+          color: lightgrey;
+          font-size: 1.1rem;
+          font-weight: 400;
+          margin-left: 1rem;
+        }
+      }
+
+      p {
+        max-width: 30rem;
+        font-size: 1.1rem;
+        color: #888888;
+        margin-bottom: 2.5rem;
+      }
+
+      h3 {
+        position: relative;
+        font-size: 1.4rem;
+        margin-top: 2.5rem;
+        padding-top: 2.5rem;
+        border-top: 1px solid rgba(136, 136, 136, 0.15);
+
+        &:before {
+          content: "";
+          position: absolute;
+          bottom: -0.4rem;
+          left: 0rem;
+          width: 2.5rem;
+          height: 2px;
+          background: black;
+          z-index: 2000;
+          transition: all 0.3s ease;
+        }
+      }
+
+      .options {
+        display: flex;
+        margin-top: 2.5rem;
+        h4 {
+          font-weight: 400;
+          font-size: 1.4rem;
+          margin-bottom: 1.5rem;
+        }
+
+        .size {
+          width: 100%;
+          span {
+            font-weight: bold;
+          }
+        }
+
+        .colours {
+          width: 100%;
+          .colour-grid {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-gap: 1rem;
+            width: max-content;
+            .colour {
+              width: 3rem;
+              height: 3rem;
+              border-radius: 50%;
+              border: 1px solid #ddd;
+            }
+          }
+        }
+      }
+
+      .product-action {
+        display: flex;
+        align-items: center;
+        margin-top: 2.5rem;
+        padding-top: 2.5rem;
+        border-top: 1px solid rgba(136, 136, 136, 0.15);
+
+        button {
+          a {
+            font-family: Abril Fatface;
+            font-weight: 400;
+            font-size: 1.8rem;
+            text-decoration: none;
+            color: white;
+          }
+        }
+        h2 {
+          margin-bottom: 0;
+          margin-top: 0.5rem;
+          margin-left: 5.2rem;
+        }
+      }
+    }
+  }
+  .product-description {
+    margin-top: 5rem;
+    h2 {
+      position: relative;
+      font-size: 1.8rem;
+      margin-bottom: 3rem;
+
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: -0.4rem;
+        left: 0rem;
+        width: 2.5rem;
+        height: 2px;
+        background: black;
+        z-index: 2000;
+        transition: all 0.3s ease;
+      }
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #888888;
+    }
+  }
+}
+
+// Small Devices
+// ---------------------------------------- //
+@media screen and (max-width: 799px) {
+  .product {
+    .product-wrapper {
+      flex-direction: column;
+
+      .product-images {
+        width: 100%;
+        min-width: unset;
+
+        .main-image {
+          width: 100%;
+        }
+
+        .other-images {
+          width: 100%;
+
+          img {
+            width: 12rem;
+            margin-right: 1rem;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .product-info {
+        margin-left: 0;
+        margin-top: 3rem;
+        width: 100%;
+
+        p {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

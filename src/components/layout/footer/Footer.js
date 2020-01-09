@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import { Link } from "gatsby";
 import Logo from "../../../assets/images/logo.png";
 import FacebookIcon from "../../../assets/images/facebook-black.png";
@@ -7,15 +7,15 @@ import addToMailchimp from "gatsby-plugin-mailchimp";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
+  const [submission, setSubmission] = useState(false);
 
   const onChange = e => setEmail(e.currentTarget.value);
 
   const onSubmit = async e => {
     e.preventDefault();
     const res = await addToMailchimp(email);
-    console.log(res);
-    // result: string; // either `success` or `error` (helpful to use this key to update your state)
-    // msg: string; // a user-friendly message indicating details of your submissions (usually something like "thanks for subscribing!" or "this email has already been added")
+    setEmail("");
+    setSubmission(res);
   };
 
   return (
@@ -39,7 +39,7 @@ const Footer = () => {
               </ul>
             </div>
             <div className="links-col">
-              <h3>Customer Services</h3>
+              <h3>Services</h3>
               <ul>
                 <li>
                   <Link aria-label="Contact Page" to="/contact">
@@ -79,26 +79,39 @@ const Footer = () => {
             </span>
           </div>
         </div>
+
         <div className="footer-newsletter">
           <div className="form-new">
-            <h1>Newsletter</h1>
-            <p>
-              Sign up for our mailing list to get lastest <br />
-              updates and offers
-            </p>
-            <label type="hidden" htmlFor="email-ip">
-              Email Here
-            </label>
-            <form onSubmit={onSubmit}>
-              <input
-                type="text"
-                id="email-ip"
-                name="email"
-                onChange={onChange}
-                placeholder="Your mail here"
-              />
-              <button type="submit">Subscribe</button>
-            </form>
+            {submission ? (
+              <div className="submission-container">
+                <h1>{submission.result}</h1>
+                <p>{submission.msg.split("<a hr")[0]}</p>
+                <button onClick={() => setSubmission(false)}>Back</button>
+              </div>
+            ) : (
+              <Fragment>
+                <h1>Newsletter</h1>
+                <p>
+                  Sign up for our mailing list to get lastest <br />
+                  updates and offers
+                </p>
+                <label type="hidden" htmlFor="email-ip">
+                  Email Here
+                </label>
+
+                <form onSubmit={onSubmit}>
+                  <input
+                    type="text"
+                    id="email-ip"
+                    name="email"
+                    value={email}
+                    onChange={onChange}
+                    placeholder="Your mail here"
+                  />
+                  <button type="submit">Subscribe</button>
+                </form>
+              </Fragment>
+            )}
           </div>
         </div>
       </div>

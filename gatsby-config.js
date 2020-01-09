@@ -43,5 +43,12 @@ module.exports = {
         trackingId: process.env.GOOGLE_ANALYTICS_KEY,
       },
     },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_DELIVERY_API_KEY,
+      },
+    },
   ],
 };
