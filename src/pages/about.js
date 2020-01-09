@@ -1,5 +1,4 @@
 import React from "react";
-import "../assets/scss/main/main.css";
 import Layout from "../components/layout/layout";
 import { useStaticQuery, graphql } from "gatsby";
 import SEO from "../components/common/seo";

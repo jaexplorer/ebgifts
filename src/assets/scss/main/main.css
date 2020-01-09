@@ -2155,4 +2155,34 @@ footer .footer-bottom .footer-container .footer-email span {
     max-width: 100%;
   }
 }
+
+.fourOfour {
+  margin-top: 15rem;
+  margin-bottom: 10rem;
+  text-align: center;
+}
+
+.fourOfour h1 {
+  font-family: "Abril Fatface";
+  font-size: 10rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.fourOfour p {
+  font-size: 1.4rem;
+  margin-bottom: 4rem;
+}
+
+.fourOfour button {
+  margin: auto;
+}
+
+.fourOfour button a {
+  font-family: "Abril Fatface";
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: white;
+  mix-blend-mode: difference;
+}
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,28 @@
+.fourOfour {
+  margin-top: 15rem;
+  margin-bottom: 10rem;
+  text-align: center;
+
+  h1 {
+    font-family: "Abril Fatface";
+    font-size: 10rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+  }
+
+  p {
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+  }
+
+  button {
+    margin: auto;
+    a {
+      font-family: "Abril Fatface";
+      font-size: 1.6rem;
+      text-decoration: none;
+      color: white;
+      mix-blend-mode: difference;
+    }
+  }
+}

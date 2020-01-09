@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Img from "gatsby-image";
-import "../assets/scss/main/main.css";
 import { Link, graphql } from "gatsby";
 import Layout from "../components/layout/layout";
 import SEO from "../components/common/seo";

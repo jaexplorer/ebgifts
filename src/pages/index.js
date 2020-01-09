@@ -1,5 +1,4 @@
 import React from "react";
-import "../assets/scss/main/main.css";
 import Layout from "../components/layout/layout";
 import SEO from "../components/common/seo";
 import Hero from "../components/layout/hero/Hero";
