@@ -1,7 +1,16 @@
 import React from "react";
+import "../assets/scss/main/main.css";
+import Layout from "../components/layout/layout";
+import SEO from "../components/common/seo";
 
 const ShopPage = () => {
-  return <div></div>;
+  return (
+    <Layout>
+      <SEO title="Shop" />
+      <h1>Shop</h1>
+      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    </Layout>
+  );
 };
 
 export default ShopPage;
