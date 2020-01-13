@@ -2,61 +2,55 @@ import React from "react";
 import "../assets/scss/main/main.css";
 import Layout from "../components/layout/layout";
 import SEO from "../components/common/seo";
+import ShopBanner from "../components/layout/shop/ShopBanner";
+import ShopItems from "../components/layout/shop/ShopItems";
+import ShopOptions from "../components/layout/shop/ShopOptions";
 
-const ShopPage = () => {
+const ShopPage = ({ data }) => {
+  const products = data.allContentfulProduct.edges;
+
   return (
     <Layout>
       <SEO title="Shop" />
-      <h1>Shop</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+      <ShopBanner />
+      <div className="shop container">
+        <ShopItems products={products} />
+        <ShopOptions products={products.map(e => e.node)} />
+      </div>
     </Layout>
   );
 };
 
 export default ShopPage;
 
-// import React from "react";
-// import { Link, graphql } from "gatsby";
-// import Layout from "../components/layout";
-// import SEO from "../components/seo";
-// const BlogPosts = ({ data }) => {
-//   const blogPosts = data.allContentfulBlogPost.edges;
-//   return (
-//     <Layout>
-//       <SEO title="Blog posts" />
-//       <h1>{"Here's a list of all blogposts!"}</h1>
-//       <div className="blogposts">
-//         {blogPosts.map(({ node: post }) => (
-//           <div key={post.id}>
-//             <Link to={`/blogpost/${post.slug}`}>{post.title}</Link>
-//           </div>
-//         ))}
-//         <span className="mgBtm__24" />
-//         <Link to="/">Go back to the homepage</Link>
-//       </div>
-//     </Layout>
-//   );
-// };
-// export default BlogPosts;
-// export const query = graphql`
-//   query BlogPostsPageQuery {
-//     allContentfulBlogPost(limit: 1000) {
-//       edges {
-//         node {
-//           id
-//           title
-//           slug
-//           body {
-//             body
-//           }
-//           image {
-//             file {
-//               url
-//             }
-//           }
-//           tags
-//         }
-//       }
-//     }
-//   }
-// `;
+export const query = graphql`
+  query ProductPageQuery {
+    allContentfulProduct(limit: 1000) {
+      edges {
+        node {
+          id
+          images {
+            fluid(maxWidth: 1000) {
+              ...GatsbyContentfulFluid_withWebp
+            }
+          }
+          title
+          caption {
+            caption
+          }
+          description {
+            description
+          }
+          price
+          categories
+          subcategories
+          size {
+            size
+          }
+          colours
+          slug
+        }
+      }
+    }
+  }
+`;

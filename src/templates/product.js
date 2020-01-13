@@ -48,33 +48,41 @@ const ProductTemplate = ({ data }) => {
           <div className="product-info">
             <h2>{title}</h2>
             <p>{caption.caption}</p>
-            <h2>
-              ${price} <s>${parseInt(price) + 20}</s>
-            </h2>
+            {price && (
+              <h2>
+                ${price} <s>${parseInt(price) + 20}</s>
+              </h2>
+            )}
             <h3>Options</h3>
             <div className="options">
               <div className="size">
                 <h4>Size</h4>
-                <span>{size.size}</span>
+                {size ? <span>{size.size}</span> : <span>NA</span>}
               </div>
               <div className="colours">
                 <h4>Colours</h4>
-                <div className="colour-grid">
-                  {colours.map((colour, index) => (
-                    <div
-                      key={index}
-                      className={`colour ${colour}`}
-                      style={{ background: colour }}
-                    ></div>
-                  ))}
-                </div>
+                {colours ? (
+                  <div className="colour-grid">
+                    {colours.map((colour, index) => (
+                      <div
+                        key={index}
+                        className={`colour ${colour}`}
+                        style={{ background: colour }}
+                      ></div>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="colour-grid">
+                    <span>NA</span>
+                  </div>
+                )}
               </div>
             </div>
             <div className="product-action">
               <button>
                 <Link to="/shop">Back</Link>
               </button>
-              <h2>${price}</h2>
+              {price && <h2>${price}</h2>}
             </div>
           </div>
         </div>
