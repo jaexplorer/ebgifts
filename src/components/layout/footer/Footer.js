@@ -32,9 +32,12 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link aria-label="My Instagram" to="/work">
+                  <a
+                    aria-label="My Instagram"
+                    href="https://www.instagram.com/eb.gifts/"
+                  >
                     Our Work
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </div>
