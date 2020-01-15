@@ -7,6 +7,8 @@ const InstagramFeed = () => {
   const getFeed = async () => {
     try {
       const res = await axios.get(`${process.env.INSTAGRAM_KEY}`);
+      console.log(res);
+      console.log(res.data);
       setFeed(res.data.data);
       console.log("Here0");
     } catch (error) {
