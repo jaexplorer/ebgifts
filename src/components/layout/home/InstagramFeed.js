@@ -10,14 +10,18 @@ const InstagramFeed = () => {
       setFeed(res.data.data);
     } catch (error) {
       if (error.response) {
+        console.log("Here1");
         console.log(error.response.data);
         console.log(error.response.status);
         console.log(error.response.headers);
       } else if (error.request) {
+        console.log("Here2");
         console.log(error.request);
       } else {
+        console.log("Here3");
         console.log("Error", error.message);
       }
+      console.log("Here4");
       console.log(error);
     }
   };
