@@ -8,6 +8,7 @@ const InstagramFeed = () => {
     try {
       const res = await axios.get(`${process.env.INSTAGRAM_KEY}`);
       setFeed(res.data.data);
+      console.log("Here0");
     } catch (error) {
       if (error.response) {
         console.log("Here1");
@@ -34,6 +35,7 @@ const InstagramFeed = () => {
     <div className="instafeed container">
       <h1>Latest Work</h1>
       <h2>- Lorem ipsum dolor sit amet. -</h2>
+      {console.log(feed)}
       <div className="feed-container">
         {feed &&
           feed
