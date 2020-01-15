@@ -6,7 +6,9 @@ const InstagramFeed = () => {
   const [feed, setFeed] = useState(false);
   const getFeed = async () => {
     try {
-      const res = await axios.get(`${process.env.INSTAGRAM_KEY}`);
+      const res = await axios.get(
+        "https://api.instagram.com/v1/users/self/media/recent/?access_token=21253163367.1677ed0.16e4941ab2f04e6da1697bf6775f58ee"
+      );
       console.log(res);
       console.log(res.data);
       setFeed(res.data.data);
