@@ -5,8 +5,12 @@ import axios from "axios";
 const InstagramFeed = () => {
   const [feed, setFeed] = useState(false);
   const getFeed = async () => {
-    const res = await axios.get(`${process.env.INSTAGRAM_KEY}`);
-    setFeed(res.data.data);
+    try {
+      const res = await axios.get(`${process.env.INSTAGRAM_KEY}`);
+      setFeed(res.data.data);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   useEffect(() => {
