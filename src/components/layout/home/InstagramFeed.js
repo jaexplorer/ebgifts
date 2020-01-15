@@ -5,8 +5,8 @@ import axios from "axios";
 const InstagramFeed = () => {
   const [feed, setFeed] = useState(false);
   const getFeed = async () => {
-    const res = await axios.get(process.env.INSTAGRAM_KEY);
-    console.log(process.env.INSTAGRAM_KEY);
+    const res = await axios.get(process.env.GATSBY_INSTAGRAM_KEY);
+    console.log(process.env.GATSBY_INSTAGRAM_KEY);
     setFeed(res.data.data);
   };
 
@@ -18,7 +18,6 @@ const InstagramFeed = () => {
     <div className="instafeed container">
       <h1>Latest Work</h1>
       <h2>- Lorem ipsum dolor sit amet. -</h2>
-      {console.log(feed)}
       <div className="feed-container">
         {feed &&
           feed

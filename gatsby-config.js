@@ -7,7 +7,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_KEY,
+        trackingId: process.env.GATSBY_GOOGLE_ANALYTICS_KEY,
         head: true,
       },
     },
@@ -41,14 +41,14 @@ module.exports = {
     {
       resolve: "gatsby-plugin-mailchimp",
       options: {
-        endpoint: process.env.MAILCHIMP_KEY,
+        endpoint: process.env.GATSBY_MAILCHIMP_KEY,
       },
     },
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: process.env.CONTENTFUL_SPACE_ID,
-        accessToken: process.env.CONTENTFUL_DELIVERY_API_KEY,
+        spaceId: process.env.GATSBY_CONTENTFUL_SPACE_ID,
+        accessToken: process.env.GATSBY_CONTENTFUL_DELIVERY_API_KEY,
       },
     },
   ],
