@@ -15,8 +15,20 @@ const Intro = () => {
           }
         }
       }
+      allContentfulTextContent {
+        edges {
+          node {
+            aboutText {
+              aboutText
+            }
+          }
+        }
+      }
     }
   `);
+
+  const AboutPic = data.AboutPic.childImageSharp.fluid;
+  const { aboutText } = data.allContentfulTextContent.edges.map(e => e.node)[0];
 
   return (
     <div className="about-intro container">
@@ -33,13 +45,7 @@ const Intro = () => {
             </h2>
           </div>
         </div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
-          modi sequi, nesciunt velit iusto repudiandae asperiores porro dicta
-          labore possimus excepturi deserunt mollitia rerum voluptatum
-          laboriosam sapiente aliquid ullam nemo voluptatibus, voluptatem, neque
-          fugiat inventore est. Soluta at consequuntur a!
-        </p>
+        <p>{aboutText.aboutText}</p>
         <div className="links-social">
           <span>CONNECT WITH US: </span>
           <span>
@@ -51,7 +57,7 @@ const Intro = () => {
         </div>
       </div>
       <div className="img-about">
-        <Img fluid={data.AboutPic.childImageSharp.fluid} />
+        <Img fluid={AboutPic} />
       </div>
     </div>
   );

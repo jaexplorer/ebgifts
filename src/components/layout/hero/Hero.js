@@ -14,21 +14,36 @@ const Hero = () => {
           }
         }
       }
+      allContentfulTextContent {
+        edges {
+          node {
+            homeSubtitle
+            homeTitle
+            homeTitleText {
+              homeTitleText
+            }
+          }
+        }
+      }
     }
   `);
+
+  const HeroImg = data.HeroImg.childImageSharp.fluid;
+  const {
+    homeSubtitle,
+    homeTitle,
+    homeTitleText,
+  } = data.allContentfulTextContent.edges.map(e => e.node)[0];
 
   return (
     <div className="hero-container">
       <div className="hero-img">
-        <Img fluid={data.HeroImg.childImageSharp.fluid} />
+        <Img fluid={HeroImg} />
       </div>
       <div className="hero-banner">
-        <h3>EXPLORE THE</h3>
-        <h1>New Arrivals</h1>
-        <p>
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout
-        </p>
+        <h3>{homeSubtitle}</h3>
+        <h1>{homeTitle}</h1>
+        <p>{homeTitleText.homeTitleText}</p>
         <img src={Pattern} alt="" />
         <Link to="/shop">Shop now</Link>
       </div>

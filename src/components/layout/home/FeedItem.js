@@ -9,7 +9,6 @@ const FeedItem = ({ feedItem }) => {
   var date = moment(new Date(created_time * 1000));
   return (
     <div className="feedItem">
-      {console.log("This Shows")}
       <a href={link} aria-label={`${caption.text.split(".")[0]}`}>
         <img src={images.standard_resolution.url} alt="" />
       </a>

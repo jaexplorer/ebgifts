@@ -21,7 +21,6 @@ const ShopOptions = ({ products }) => {
   return (
     <div className="shop-options">
       <ul className="option">
-        {console.log(options, "Yay")}
         <li className="heading">Categories</li>
         <li className="bold">Testing</li>
         <li className="bold">Testing</li>

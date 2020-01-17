@@ -12,21 +12,29 @@ const DontHaveTime = () => {
           }
         }
       }
+      allContentfulTextContent {
+        edges {
+          node {
+            timeText {
+              timeText
+            }
+          }
+        }
+      }
     }
   `);
+
+  const TimePic = data.TimePic.childImageSharp.fluid;
+  const { timeText } = data.allContentfulTextContent.edges.map(e => e.node)[0];
 
   return (
     <div className="donthavetime">
       <div className="donthavetime-img">
-        <Img fluid={data.TimePic.childImageSharp.fluid} />
+        <Img fluid={TimePic} />
       </div>
       <div className="donthavetime-content">
         <h1>Don't have time ?</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim cumque
-          amet exercitationem aperiam asperiores non et iste dignissimos quam
-          nostrum.
-        </p>
+        <p>{timeText.timeText}</p>
         <button>Shop now</button>
       </div>
     </div>

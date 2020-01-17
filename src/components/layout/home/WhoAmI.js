@@ -1,7 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
-// import Me from "../../../assets/images/author.jpg";
 
 const WhoAmI = () => {
   const data = useStaticQuery(graphql`
@@ -20,30 +19,38 @@ const WhoAmI = () => {
           }
         }
       }
+      allContentfulTextContent {
+        edges {
+          node {
+            whoAmIText {
+              whoAmIText
+            }
+          }
+        }
+      }
     }
   `);
+  const WhoAmIBG = data.WhoAmIBG.childImageSharp.fluid;
+  const Me = data.Me.childImageSharp.fluid;
+
+  const { whoAmIText } = data.allContentfulTextContent.edges.map(
+    e => e.node
+  )[0];
 
   return (
     <div className="whoami">
       <div className="whoami-img">
-        <Img fluid={data.WhoAmIBG.childImageSharp.fluid} />
+        <Img fluid={WhoAmIBG} />
       </div>
       <div className="who-content">
         <div className="who">
           <h1>who am i ?</h1>
           <h2>who am i ?</h2>
         </div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis,
-          earum vel. Nam corrupti quia tempore est repellat vitae omnis quod
-          quis, totam aliquid laudantium odio quaerat assumenda voluptatem vel
-          adipisci dolorum, mollitia tenetur. Temporibus fugiat aperiam aut rem
-          dicta eius harum magnam iste id fugit, modi soluta error consequuntur
-          reiciendis.
-        </p>
+        <p>{whoAmIText.whoAmIText}</p>
         <div className="me">
           <div className="author-pic">
-            <Img fluid={data.Me.childImageSharp.fluid} />
+            <Img fluid={Me} />
           </div>
           <div className="info">
             <h4>Elyse Barcellona</h4>
