@@ -38,7 +38,7 @@ const WhoAmI = () => {
   )[0];
 
   return (
-    <div className="whoami">
+    <div data-aos="fade-up" data-aos-delay="700" className="whoami">
       <div className="whoami-img">
         <Img fluid={WhoAmIBG} />
       </div>

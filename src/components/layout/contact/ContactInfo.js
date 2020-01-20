@@ -5,7 +5,7 @@ import EmailPic from "../../../assets/images/Email-Address.png";
 
 const ContactInfo = () => {
   return (
-    <div className="contact-info container">
+    <div data-aos="fade-up" className="contact-info container">
       <div className="contact-container">
         <img src={AddressPic} alt="" />
         <h1>Our Address</h1>

@@ -19,7 +19,7 @@ const ShopOptions = ({ products }) => {
   };
 
   return (
-    <div className="shop-options">
+    <div data-aos="fade-left" className="shop-options">
       <ul className="option">
         <li className="heading">Categories</li>
         <li className="bold">Testing</li>

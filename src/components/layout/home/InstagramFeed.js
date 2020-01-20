@@ -14,9 +14,9 @@ const InstagramFeed = () => {
   }, []);
 
   return (
-    <div className="instafeed container">
+    <div data-aos="fade-up" className="instafeed container">
       <h1>Latest Work</h1>
-      <h2>- Lorem ipsum dolor sit amet. -</h2>
+      <h2>- See my Instagram Below -</h2>
       <div className="feed-container">
         {feed &&
           feed

@@ -17,10 +17,10 @@ const ContactUs = () => {
 
   return (
     <div className="contact-us container">
-      <div className="contact-us-img">
+      <div data-aos="fade-right" className="contact-us-img">
         <Img fluid={data.ContactUsImg.childImageSharp.fluid} />
       </div>
-      <div className="contact-us-form">
+      <div data-aos="fade-left" className="contact-us-form">
         <h1>Send us a message</h1>
         <form
           name="contact"

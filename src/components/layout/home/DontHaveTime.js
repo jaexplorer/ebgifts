@@ -1,5 +1,5 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
+import { Link, useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 
 const DontHaveTime = () => {
@@ -28,14 +28,16 @@ const DontHaveTime = () => {
   const { timeText } = data.allContentfulTextContent.edges.map(e => e.node)[0];
 
   return (
-    <div className="donthavetime">
+    <div data-aos="fade-up" className="donthavetime">
       <div className="donthavetime-img">
         <Img fluid={TimePic} />
       </div>
       <div className="donthavetime-content">
         <h1>Don't have time ?</h1>
         <p>{timeText.timeText}</p>
-        <button>Shop now</button>
+        <Link to="/shop">
+          <button>Shop now</button>
+        </Link>
       </div>
     </div>
   );

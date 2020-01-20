@@ -10,7 +10,7 @@ import SeeMore from "../components/layout/about/SeeMore";
 const AboutPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      AboutBG: file(relativePath: { eq: "BG-title.jpg" }) {
+      AboutBG: file(relativePath: { eq: "present.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1000, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp

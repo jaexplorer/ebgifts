@@ -32,7 +32,7 @@ const Intro = () => {
 
   return (
     <div className="about-intro container">
-      <div className="welcome">
+      <div data-aos="fade-right" className="welcome">
         <div className="author-container">
           <div className="author-pic">
             <img src={AuthorPic} alt="" />
@@ -49,14 +49,24 @@ const Intro = () => {
         <div className="links-social">
           <span>CONNECT WITH US: </span>
           <span>
-            <img src={FacebookIcon} alt="" />
+            <a
+              aria-label="My Facebook"
+              href="https://www.facebook.com/EBgifts/"
+            >
+              <img src={FacebookIcon} alt="" />
+            </a>
           </span>
           <span>
-            <img src={InstagramIcon} alt="" />
+            <a
+              aria-label="My Instagram"
+              href="https://www.instagram.com/eb.gifts/"
+            >
+              <img src={InstagramIcon} alt="" />
+            </a>
           </span>
         </div>
       </div>
-      <div className="img-about">
+      <div data-aos="fade-left" className="img-about">
         <Img fluid={AboutPic} />
       </div>
     </div>

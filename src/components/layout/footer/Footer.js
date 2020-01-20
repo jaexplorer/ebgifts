@@ -75,10 +75,20 @@ const Footer = () => {
           <div className="links-social">
             <span>CONNECT WITH US: </span>
             <span>
-              <img src={FacebookIcon} alt="" />
+              <a
+                aria-label="My Facebook"
+                href="https://www.facebook.com/EBgifts/"
+              >
+                <img src={FacebookIcon} alt="" />
+              </a>
             </span>
             <span>
-              <img src={InstagramIcon} alt="" />
+              <a
+                aria-label="My Instagram"
+                href="https://www.instagram.com/eb.gifts/"
+              >
+                <img src={InstagramIcon} alt="" />
+              </a>
             </span>
           </div>
         </div>
@@ -122,7 +132,9 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="footer-container">
           <div className="footer-logo">
-            <img src={Logo} alt="" />
+            <Link to="/">
+              <img src={Logo} alt="" />
+            </Link>
           </div>
           <div className="footer-copywrite">
             Copyright © {new Date().getFullYear()} by EBGifts

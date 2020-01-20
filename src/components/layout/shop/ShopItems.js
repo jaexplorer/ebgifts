@@ -4,7 +4,7 @@ import Img from "gatsby-image";
 
 const ShopItems = ({ products }) => {
   return (
-    <div className="shop-items">
+    <div data-aos="fade-up" className="shop-items">
       {products.map(({ node: item }) => (
         <div className="item" key={item.id}>
           <Link to={`/shop/${item.slug}`} className="img-container">

@@ -1,30 +1,61 @@
 import React from "react";
 import ServicesBG from "../../../assets/images/wedding.png";
+import { Link, useStaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
 
 const Services = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      ShoppingPic: file(relativePath: { eq: "shopping.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 400) {
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          }
+        }
+      }
+      HamperPic: file(relativePath: { eq: "hampers.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 400) {
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          }
+        }
+      }
+      WrappingPic: file(relativePath: { eq: "wrapping.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 400) {
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          }
+        }
+      }
+    }
+  `);
+
   return (
-    <div className="services">
+    <div data-aos="fade-up" className="services">
       <h1>Services</h1>
-      <h2>
-        - Lorem Ipsum is<span class="hidden-xs"> simply dummy</span> text of the
-        printing -
-      </h2>
+      <h2>- What we offer -</h2>
 
       <div className="services-container">
         <img src={ServicesBG} alt="" />
         <div className="services-content container">
-          <div className="service">
-            <div></div>
+          <Link to="/shop" className="service">
+            <div>
+              <Img fluid={data.ShoppingPic.childImageSharp.fluid} />
+            </div>
+            <h2>Gift Shopping</h2>
+          </Link>
+          <Link to="/shop" className="service">
+            <div>
+              <Img fluid={data.HamperPic.childImageSharp.fluid} />
+            </div>
+            <h2>Hampers</h2>
+          </Link>
+          <Link to="/shop" className="service">
+            <div>
+              <Img fluid={data.WrappingPic.childImageSharp.fluid} />
+            </div>
             <h2>Gift Wrapping</h2>
-          </div>
-          <div className="service">
-            <div></div>
-            <h2>Present stuffs</h2>
-          </div>
-          <div className="service">
-            <div></div>
-            <h2>Shopping</h2>
-          </div>
+          </Link>
         </div>
       </div>
     </div>

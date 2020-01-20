@@ -8,16 +8,18 @@ import Collections from "../components/layout/home/Collections";
 import DontHaveTime from "../components/layout/home/DontHaveTime";
 import InstagramFeed from "../components/layout/home/InstagramFeed";
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <Hero />
-    <WhoAmI />
-    <Collections />
-    <DontHaveTime />
-    {/* <Testimonials /> */}
-    <InstagramFeed />
-  </Layout>
-);
+const IndexPage = () => {
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <Hero />
+      <WhoAmI />
+      <Collections />
+      <DontHaveTime />
+      {/* <Testimonials /> */}
+      <InstagramFeed />
+    </Layout>
+  );
+};
 
 export default IndexPage;

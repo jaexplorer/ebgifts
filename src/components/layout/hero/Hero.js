@@ -40,7 +40,7 @@ const Hero = () => {
       <div className="hero-img">
         <Img fluid={HeroImg} />
       </div>
-      <div className="hero-banner">
+      <div data-aos="fade-down" className="hero-banner">
         <h3>{homeSubtitle}</h3>
         <h1>{homeTitle}</h1>
         <p>{homeTitleText.homeTitleText}</p>
