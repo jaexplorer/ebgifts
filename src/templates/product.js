@@ -48,11 +48,11 @@ const ProductTemplate = ({ data }) => {
           <div className="product-info">
             <h2>{title}</h2>
             <p>{caption.caption}</p>
-            {price && (
+            {/* {price && (
               <h2>
                 ${price} <s>${parseInt(price) + 20}</s>
               </h2>
-            )}
+            )} */}
             <h3>Options</h3>
             <div className="options">
               <div className="size">
@@ -82,7 +82,7 @@ const ProductTemplate = ({ data }) => {
               <button>
                 <Link to="/shop">Back</Link>
               </button>
-              {price && <h2>${price}</h2>}
+              {/* {price && <h2>${price}</h2>} */}
             </div>
           </div>
         </div>

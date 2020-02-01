@@ -22,9 +22,11 @@ const ShopOptions = ({ products }) => {
     <div data-aos="fade-left" className="shop-options">
       <ul className="option">
         <li className="heading">Categories</li>
-        <li className="bold">Testing</li>
-        <li className="bold">Testing</li>
-        <li className="bold">Testing</li>
+        {options.categories.map((cat, index) => (
+          <li key={index} className="bold">
+            {cat}
+          </li>
+        ))}
       </ul>
       <ul className="option">
         <li className="heading">Colour</li>

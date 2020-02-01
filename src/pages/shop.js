@@ -15,7 +15,7 @@ const ShopPage = ({ data }) => {
       <ShopBanner />
       <div className="shop container">
         <ShopItems products={products} />
-        <ShopOptions products={products.map(e => e.node)} />
+        {/* <ShopOptions products={products.map(e => e.node)} /> */}
       </div>
     </Layout>
   );

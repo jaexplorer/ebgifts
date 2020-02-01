@@ -2289,7 +2289,7 @@ footer .footer-bottom .footer-container .footer-email span {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  margin-right: 2.5rem;
+  margin-right: auto;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto auto auto;
@@ -2334,7 +2334,7 @@ footer .footer-bottom .footer-container .footer-email span {
 }
 
 .shop .shop-options {
-  margin-left: auto;
+  margin-left: 2.5rem;
 }
 
 .shop .shop-options .option {

@@ -17,7 +17,7 @@ const FeedItem = ({ feedItem }) => {
         <img src={CalendarPic} alt="" />
         <span>{date.format("ll")}</span>
         <span>|</span>
-        <img src={HeartPic} alt="" />
+        <img loading="lazy" src={HeartPic} alt="" />
         <span>{likes.count} likes</span>
       </div>
       <p>{caption.text.split(".")[0]}</p>
