@@ -24,9 +24,9 @@ const ProductTemplate = ({ data }) => {
       <div className="product container">
         <div className="pagination">
           <Link to="/">Home</Link>
-          <span>></span>
+          <span></span>
           <Link to="/shop">Shop</Link>
-          <span>></span>
+          <span></span>
           <span>{title}</span>
         </div>
         <div className="product-wrapper">
