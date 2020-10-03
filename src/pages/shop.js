@@ -44,9 +44,6 @@ export const query = graphql`
           price
           categories
           subcategories
-          size {
-            size
-          }
           colours
           slug
         }

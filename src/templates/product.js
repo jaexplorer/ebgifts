@@ -13,7 +13,7 @@ const ProductTemplate = ({ data }) => {
     caption,
     description,
     images,
-    size,
+    // size,
     colours,
     price,
   } = data.contentfulProduct;
@@ -55,10 +55,10 @@ const ProductTemplate = ({ data }) => {
             )} */}
             <h3>Options</h3>
             <div className="options">
-              <div className="size">
+              {/* <div className="size">
                 <h4>Size</h4>
                 {size ? <span>{size.size}</span> : <span>NA</span>}
-              </div>
+              </div> */}
               <div className="colours">
                 <h4>Colours</h4>
                 {colours ? (
@@ -115,9 +115,6 @@ export const pageQuery = graphql`
       price
       categories
       subcategories
-      size {
-        size
-      }
       colours
       slug
     }

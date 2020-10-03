@@ -5,11 +5,11 @@ const ShopOptions = ({ products }) => {
   const [options] = useState({
     categories: [...new Set(products.map(c => c.categories).flat())],
     colours: [...new Set(products.map(c => c.colours).flat())],
-    sizes: products
-      .map(s => s.size)
-      .filter(Boolean)
-      .map(Object.values)
-      .flat(),
+    // sizes: products
+    //   .map(s => s.size)
+    //   .filter(Boolean)
+    //   .map(Object.values)
+    //   .flat(),
     subcategories: [...new Set(products.map(s => s.subcategories).flat())],
     totalSubCat: products.map(s => s.subcategories).flat(),
   });
@@ -42,7 +42,7 @@ const ShopOptions = ({ products }) => {
           See {expandColour ? "Less" : "More"}
         </li>
       </ul>
-      <ul className="option">
+      {/* <ul className="option">
         <li className="heading">Size</li>
         <li>
           XS <span className="occurances">({getOcc(options.sizes, "XS")})</span>
@@ -59,7 +59,7 @@ const ShopOptions = ({ products }) => {
         <li>
           XL<span className="occurances">({getOcc(options.sizes, "XL")})</span>
         </li>
-      </ul>
+      </ul> */}
       <ul className="option">
         <li className="heading">Subcategory</li>
         {options.subcategories.map((sub, index) => (
