@@ -45,7 +45,7 @@ const Collections = () => {
 
   return (
     <div data-aos="fade-up" className="collections container">
-      <h1>What we do</h1>
+      <h1>What I do</h1>
       <h2>- EbGift Services -</h2>
       <div className="collections-wrapper">
         <div className="calltoaction">

@@ -14,143 +14,67 @@ const FAQPage = () => {
           }
         }
       }
+      allContentfulFaqPage {
+        edges {
+          node {
+            faqHeader {
+              faqHeader
+            }
+            faqQuestions {
+              internal {
+                content
+              }
+            }
+          }
+        }
+      }
     }
   `);
+
+  const {
+    faqHeader: { faqHeader },
+    faqQuestions,
+  } = data.allContentfulFaqPage.edges.map(e => e.node)[0];
+
+  const questions = () => {
+    let result = [];
+    faqQuestions.map(subject =>
+      result.push(JSON.parse(subject.internal.content))
+    );
+    console.log(result);
+    return result;
+  };
+
+  questions();
+
   return (
     <Layout>
       <SEO title="FAQs" />
       <PageBanner
         title={"FAQs"}
-        subtext={`It is a long established fact that a reader will
-be distracted by the readable content of a page when looking at its layout`}
+        subtext={faqHeader}
         backgroundImg={data.FAQBG.childImageSharp.fluid}
       />
       <div className="faq-container container">
-        <div className="faq-subject">
-          <h1>Shopping information</h1>
-          <div className="faq-wrapper">
-            <div className="faq-content">
-              <h2>What Shipping Methods Are Available?</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
-                ipsum doloremque quo adipisci ut omnis, velit et praesentium
-                repudiandae hic ipsam sint, dolores neque vero ipsa perferendis
-                id maxime pariatur.
-              </p>
+        {questions().map(subject =>
+          Object.entries(subject).map(([key, value]) => (
+            <div className="faq-subject">
+              <h1>{key}</h1>
+              <div className="faq-wrapper">
+                {value.map(question => (
+                  <>
+                    {Object.entries(question).map(([key, value]) => (
+                      <div className="faq-content">
+                        <h2>{key}</h2>
+                        <p>{value}</p>
+                      </div>
+                    ))}
+                  </>
+                ))}
+              </div>
             </div>
-            <div className="faq-content">
-              <h2>What Shipping Methods Are Available?</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
-                ipsum doloremque quo adipisci ut omnis, velit et praesentium
-                repudiandae hic ipsam sint, dolores neque vero ipsa perferendis
-                id maxime pariatur.
-              </p>
-            </div>
-            <div className="faq-content">
-              <h2>What Shipping Methods Are Available?</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
-                ipsum doloremque quo adipisci ut omnis, velit et praesentium
-                repudiandae hic ipsam sint, dolores neque vero ipsa perferendis
-                id maxime pariatur.
-              </p>
-            </div>
-            <div className="faq-content">
-              <h2>What Shipping Methods Are Available?</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
-                ipsum doloremque quo adipisci ut omnis, velit et praesentium
-                repudiandae hic ipsam sint, dolores neque vero ipsa perferendis
-                id maxime pariatur.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="faq-subject">
-          <h1>Payment information</h1>
-          <div className="faq-wrapper">
-            <div className="faq-content">
-              <h2>What Shipping Methods Are Available?</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
-                ipsum doloremque quo adipisci ut omnis, velit et praesentium
-                repudiandae hic ipsam sint, dolores neque vero ipsa perferendis
-                id maxime pariatur.
-              </p>
-            </div>
-            <div className="faq-content">
-              <h2>What Shipping Methods Are Available?</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
-                ipsum doloremque quo adipisci ut omnis, velit et praesentium
-                repudiandae hic ipsam sint, dolores neque vero ipsa perferendis
-                id maxime pariatur.
-              </p>
-            </div>
-            <div className="faq-content">
-              <h2>What Shipping Methods Are Available?</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
-                ipsum doloremque quo adipisci ut omnis, velit et praesentium
-                repudiandae hic ipsam sint, dolores neque vero ipsa perferendis
-                id maxime pariatur.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="faq-subject">
-          <h1>Orders / Delivery & Returns</h1>
-          <div className="faq-wrapper">
-            <div className="faq-content">
-              <h2>What Shipping Methods Are Available?</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
-                ipsum doloremque quo adipisci ut omnis, velit et praesentium
-                repudiandae hic ipsam sint, dolores neque vero ipsa perferendis
-                id maxime pariatur.
-              </p>
-            </div>
-            <div className="faq-content">
-              <h2>What Shipping Methods Are Available?</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
-                ipsum doloremque quo adipisci ut omnis, velit et praesentium
-                repudiandae hic ipsam sint, dolores neque vero ipsa perferendis
-                id maxime pariatur.
-              </p>
-            </div>
-            <div className="faq-content">
-              <h2>What Shipping Methods Are Available?</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
-                ipsum doloremque quo adipisci ut omnis, velit et praesentium
-                repudiandae hic ipsam sint, dolores neque vero ipsa perferendis
-                id maxime pariatur.
-              </p>
-            </div>
-            <div className="faq-content">
-              <h2>What Shipping Methods Are Available?</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
-                ipsum doloremque quo adipisci ut omnis, velit et praesentium
-                repudiandae hic ipsam sint, dolores neque vero ipsa perferendis
-                id maxime pariatur.
-              </p>
-            </div>
-            <div className="faq-content">
-              <h2>What Shipping Methods Are Available?</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
-                ipsum doloremque quo adipisci ut omnis, velit et praesentium
-                repudiandae hic ipsam sint, dolores neque vero ipsa perferendis
-                id maxime pariatur.
-              </p>
-            </div>
-          </div>
-        </div>
+          ))
+        )}
       </div>
     </Layout>
   );

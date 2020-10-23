@@ -19,7 +19,7 @@ const WhoAmI = () => {
           }
         }
       }
-      allContentfulTextContent {
+      allContentfulHomePage {
         edges {
           node {
             whoAmIText {
@@ -33,9 +33,7 @@ const WhoAmI = () => {
   const WhoAmIBG = data.WhoAmIBG.childImageSharp.fluid;
   const Me = data.Me.childImageSharp.fluid;
 
-  const { whoAmIText } = data.allContentfulTextContent.edges.map(
-    e => e.node
-  )[0];
+  const { whoAmIText } = data.allContentfulHomePage.edges.map(e => e.node)[0];
 
   return (
     <div data-aos="fade-up" data-aos-delay="700" className="whoami">

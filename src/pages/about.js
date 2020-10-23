@@ -17,15 +17,28 @@ const AboutPage = () => {
           }
         }
       }
+      allContentfulAboutPage {
+        edges {
+          node {
+            aboutHeader {
+              aboutHeader
+            }
+          }
+        }
+      }
     }
   `);
+
+  const {
+    aboutHeader: { aboutHeader },
+  } = data.allContentfulAboutPage.edges.map(e => e.node)[0];
+
   return (
     <Layout>
       <SEO title="About" />
       <PageBanner
         title={"About Us"}
-        subtext={`It is a long established fact that a reader will
-be distracted by the readable content of a page when looking at its layout`}
+        subtext={aboutHeader}
         backgroundImg={data.AboutBG.childImageSharp.fluid}
       />
       <Intro />

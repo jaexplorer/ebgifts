@@ -65,9 +65,9 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link aria-label="Admin Page" to="/admin">
+                  <a aria-label="Admin Page" href="https://www.contentful.com/">
                     Admin
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </div>

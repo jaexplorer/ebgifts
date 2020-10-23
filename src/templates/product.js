@@ -13,8 +13,7 @@ const ProductTemplate = ({ data }) => {
     caption,
     description,
     images,
-    // size,
-    colours,
+    sizes,
     price,
   } = data.contentfulProduct;
 
@@ -48,41 +47,24 @@ const ProductTemplate = ({ data }) => {
           <div className="product-info">
             <h2>{title}</h2>
             <p>{caption.caption}</p>
-            {/* {price && (
-              <h2>
-                ${price} <s>${parseInt(price) + 20}</s>
-              </h2>
-            )} */}
+            {price && <h2>${price}</h2>}
             <h3>Options</h3>
             <div className="options">
-              {/* <div className="size">
-                <h4>Size</h4>
-                {size ? <span>{size.size}</span> : <span>NA</span>}
-              </div> */}
-              <div className="colours">
-                <h4>Colours</h4>
-                {colours ? (
-                  <div className="colour-grid">
-                    {colours.map((colour, index) => (
-                      <div
-                        key={index}
-                        className={`colour ${colour}`}
-                        style={{ background: colour }}
-                      ></div>
-                    ))}
-                  </div>
-                ) : (
-                  <div className="colour-grid">
-                    <span>NA</span>
-                  </div>
-                )}
+              {console.log(sizes)}
+              <div className="size">
+                <h4>Sizes available</h4>
+                {sizes.map((size, index) => (
+                  <p>{size}</p>
+                ))}
               </div>
             </div>
             <div className="product-action">
               <button>
                 <Link to="/shop">Back</Link>
               </button>
-              {/* {price && <h2>${price}</h2>} */}
+              <button style={{ marginLeft: "1rem" }}>
+                <Link to="/contact">Contact</Link>
+              </button>
             </div>
           </div>
         </div>
@@ -114,8 +96,7 @@ export const pageQuery = graphql`
       }
       price
       categories
-      subcategories
-      colours
+      sizes
       slug
     }
   }

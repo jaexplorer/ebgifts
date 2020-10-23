@@ -12,7 +12,7 @@ const DontHaveTime = () => {
           }
         }
       }
-      allContentfulTextContent {
+      allContentfulHomePage {
         edges {
           node {
             timeText {
@@ -25,7 +25,7 @@ const DontHaveTime = () => {
   `);
 
   const TimePic = data.TimePic.childImageSharp.fluid;
-  const { timeText } = data.allContentfulTextContent.edges.map(e => e.node)[0];
+  const { timeText } = data.allContentfulHomePage.edges.map(e => e.node)[0];
 
   return (
     <div data-aos="fade-up" className="donthavetime">

@@ -3,8 +3,7 @@ import Layout from "../components/layout/layout";
 import SEO from "../components/common/seo";
 import Hero from "../components/layout/hero/Hero";
 import WhoAmI from "../components/layout/home/WhoAmI";
-import Collections from "../components/layout/home/Collections";
-// import Testimonials from "../components/layout/home/Testimonials";
+import Services from "../components/layout/home/Services";
 import DontHaveTime from "../components/layout/home/DontHaveTime";
 import InstagramFeed from "../components/layout/home/InstagramFeed";
 
@@ -14,9 +13,8 @@ const IndexPage = () => {
       <SEO title="Home" />
       <Hero />
       <WhoAmI />
-      <Collections />
+      <Services />
       <DontHaveTime />
-      {/* <Testimonials /> */}
       <InstagramFeed />
     </Layout>
   );

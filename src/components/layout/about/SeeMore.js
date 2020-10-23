@@ -14,7 +14,7 @@ const SeeMore = () => {
           className="seemore-container"
         >
           <img src={InstagramPic} alt="" />
-          <h1>Our Work</h1>
+          <h1>My Work</h1>
         </a>
         <Link to="/faq" className="seemore-container">
           <img src={FAQPic} alt="" />

@@ -1684,10 +1684,17 @@ footer .footer-bottom .footer-container .footer-email span {
 
 .instafeed .feed-container .feedItem a {
   width: 100%;
+  height: 20rem;
+  display: block;
 }
 
 .instafeed .feed-container .feedItem a > img {
+  height: 100%;
   width: 100%;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .instafeed .feed-container .feedItem .item-info {
@@ -2307,7 +2314,7 @@ footer .footer-bottom .footer-container .footer-email span {
 }
 
 .shop .shop-items .item .img-container div {
-  min-height: 25rem;
+  height: 25rem;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -2397,6 +2404,10 @@ footer .footer-bottom .footer-container .footer-email span {
   border-bottom: 1px solid #ddd;
 }
 
+.shop .shop-options .option .active {
+  color: black;
+}
+
 .shop .shop-options .option .colour-options {
   display: -ms-grid;
   display: grid;
@@ -2448,5 +2459,225 @@ footer .footer-bottom .footer-container .footer-email span {
     -ms-grid-columns: auto auto;
         grid-template-columns: auto auto;
   }
+}
+
+.giftwrapping-intro {
+  margin-bottom: 10rem;
+  margin-top: 20rem;
+  position: relative;
+}
+
+.giftwrapping-intro .background-image {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.giftwrapping-intro .background-image > div {
+  height: 100%;
+  width: 75%;
+}
+
+.giftwrapping-intro .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc(100% - 6rem);
+  top: 23rem;
+  position: absolute;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.giftwrapping-intro .content .description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 10rem;
+}
+
+.giftwrapping-intro .content .description h1 {
+  font-family: Abril Fatface;
+  font-weight: 400;
+  font-size: 5rem;
+  color: black;
+  margin-bottom: 1.5rem;
+}
+
+.giftwrapping-intro .content .description p {
+  width: 500px;
+}
+
+.giftwrapping-intro .content .page-image {
+  margin-top: 2.5rem;
+}
+
+.giftwrapping-intro .content .page-image > div {
+  width: 22rem;
+  height: 22rem;
+}
+
+.table {
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
+.table th {
+  padding: 12px;
+  text-align: left;
+  background-color: #e6ab90;
+  font-family: Abril Fatface;
+  color: white;
+}
+
+.table td {
+  padding: 12px;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f3f3f3;
+}
+
+.table-images {
+  padding-left: 6rem;
+  padding-right: 6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 10rem;
+}
+
+.table-images .table-image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-left: 2rem;
+}
+
+.table-images .table-image:first-child {
+  margin-left: 0rem;
+}
+
+.table-images .table-image h1 {
+  font-family: Abril Fatface;
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.table-images .table-image > div {
+  width: 100%;
+  height: 20rem;
+}
+
+.fine-print {
+  padding-left: 6rem;
+  padding-right: 6rem;
+  margin-top: 10rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 899px) {
+  .giftwrapping-intro {
+    margin-bottom: 10rem;
+    margin-top: 20rem;
+    position: relative;
+  }
+  .giftwrapping-intro .background-image {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .giftwrapping-intro .background-image > div {
+    height: 100%;
+    width: 75%;
+  }
+  .giftwrapping-intro .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: calc(100%);
+    top: 18rem;
+    position: absolute;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .giftwrapping-intro .content .description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    margin-right: 5rem;
+  }
+  .giftwrapping-intro .content .description h1 {
+    font-family: Abril Fatface;
+    font-weight: 400;
+    font-size: 5rem;
+    color: black;
+    margin-bottom: 1.5rem;
+  }
+  .giftwrapping-intro .content .description p {
+    width: 500px;
+  }
+  .giftwrapping-intro .content .page-image {
+    display: none;
+    margin-top: 2.5rem;
+  }
+  .giftwrapping-intro .content .page-image > div {
+    width: 22rem;
+    height: 22rem;
+  }
+  .table-images {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .table-images .table-image {
+    margin-left: 0rem;
+    margin-bottom: 2rem;
+  }
+  .table-images .table-image > div {
+    width: 100%;
+    height: 40rem;
+  }
+}
+
+.unavailable {
+  width: 100%;
+  font-family: Abril Fatface;
+  font-weight: 400;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.unavailableText {
+  width: 100%;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 5rem;
 }
 /*# sourceMappingURL=main.css.map */

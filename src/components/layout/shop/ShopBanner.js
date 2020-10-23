@@ -20,8 +20,8 @@ const ShopBanner = () => {
       <Img fluid={data.ShopBG.childImageSharp.fluid} />
       <div className="shopbanner-content container">
         <h1>
-          Free <br />
-          Delivery
+          New <br />
+          Items
         </h1>
         <h2>SHOP NOW</h2>
       </div>

@@ -11,7 +11,7 @@ const ShopItems = ({ products }) => {
             <Img fluid={item.images[0].fluid} />
           </Link>
           <Link to={`/shop/${item.slug}`}>{item.title}</Link>
-          {/* <h4>${item.price}</h4> */}
+          <h4>${item.price}</h4>
         </div>
       ))}
     </div>

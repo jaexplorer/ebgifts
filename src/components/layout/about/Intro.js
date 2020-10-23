@@ -15,11 +15,11 @@ const Intro = () => {
           }
         }
       }
-      allContentfulTextContent {
+      allContentfulAboutPage {
         edges {
           node {
-            aboutText {
-              aboutText
+            aboutBody {
+              aboutBody
             }
           }
         }
@@ -28,7 +28,9 @@ const Intro = () => {
   `);
 
   const AboutPic = data.AboutPic.childImageSharp.fluid;
-  const { aboutText } = data.allContentfulTextContent.edges.map(e => e.node)[0];
+  const {
+    aboutBody: { aboutBody },
+  } = data.allContentfulAboutPage.edges.map(e => e.node)[0];
 
   return (
     <div className="about-intro container">
@@ -45,9 +47,9 @@ const Intro = () => {
             </h2>
           </div>
         </div>
-        <p>{aboutText.aboutText}</p>
+        <p>{aboutBody}</p>
         <div className="links-social">
-          <span>CONNECT WITH US: </span>
+          <span>CONNECT WITH ME: </span>
           <span>
             <a
               aria-label="My Facebook"

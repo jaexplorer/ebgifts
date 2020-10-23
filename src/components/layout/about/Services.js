@@ -33,24 +33,24 @@ const Services = () => {
   return (
     <div data-aos="fade-up" className="services">
       <h1>Services</h1>
-      <h2>- What we offer -</h2>
+      <h2>- What I offer -</h2>
 
       <div className="services-container">
         <img src={ServicesBG} alt="" />
         <div className="services-content container">
           <Link to="/shop" className="service">
             <div>
-              <Img fluid={data.ShoppingPic.childImageSharp.fluid} />
-            </div>
-            <h2>Gift Shopping</h2>
-          </Link>
-          <Link to="/shop" className="service">
-            <div>
               <Img fluid={data.HamperPic.childImageSharp.fluid} />
             </div>
             <h2>Hampers</h2>
           </Link>
-          <Link to="/shop" className="service">
+          <Link to="/personalShopping" className="service">
+            <div>
+              <Img fluid={data.ShoppingPic.childImageSharp.fluid} />
+            </div>
+            <h2>Personal Shopping</h2>
+          </Link>
+          <Link to="/giftWrapping" className="service">
             <div>
               <Img fluid={data.WrappingPic.childImageSharp.fluid} />
             </div>

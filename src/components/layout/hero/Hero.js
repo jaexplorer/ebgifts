@@ -14,7 +14,7 @@ const Hero = () => {
           }
         }
       }
-      allContentfulTextContent {
+      allContentfulHomePage {
         edges {
           node {
             homeSubtitle
@@ -33,7 +33,7 @@ const Hero = () => {
     homeSubtitle,
     homeTitle,
     homeTitleText,
-  } = data.allContentfulTextContent.edges.map(e => e.node)[0];
+  } = data.allContentfulHomePage.edges.map(e => e.node)[0];
 
   return (
     <div className="hero-container">
