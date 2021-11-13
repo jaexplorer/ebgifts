@@ -63,7 +63,11 @@ const ProductTemplate = ({ data }) => {
                 <Link to="/shop">Back</Link>
               </button>
               <button style={{ marginLeft: "1rem" }}>
-                <Link to="/contact">Contact</Link>
+                <Link
+                  to={`/contact?message=Hi Elyse,\n I'm interested in ordering your hamper - ${title}`}
+                >
+                  Order now
+                </Link>
               </button>
             </div>
           </div>

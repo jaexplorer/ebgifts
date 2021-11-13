@@ -14,6 +14,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    "gatsby-plugin-use-query-params",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -35,6 +36,14 @@ module.exports = {
         orientation: `portrait`,
         icon: `src/assets/images/fav.png`,
         theme_color_in_head: false,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-typescript`,
+      options: {
+        isTSX: true, // defaults to false
+        jsxPragma: `jsx`, // defaults to "React"
+        allExtensions: true, // defaults to false
       },
     },
     `gatsby-plugin-offline`,

@@ -1,8 +1,12 @@
-import React from "react";
+import React, { FC } from "react";
 import Img from "gatsby-image";
 import { useStaticQuery, graphql } from "gatsby";
 
-const ContactUs = () => {
+interface ContactUsProps {
+  initialMessage: string;
+}
+
+const ContactUs: FC<ContactUsProps> = ({ initialMessage }) => {
   const data = useStaticQuery(graphql`
     query {
       ContactUsImg: file(relativePath: { eq: "img-contact.jpg" }) {
@@ -68,6 +72,7 @@ const ContactUs = () => {
               id="message-ip"
               name="message"
               placeholder="Write your message here..."
+              value={initialMessage}
             ></textarea>
           </div>
           <button type="submit">Send message</button>

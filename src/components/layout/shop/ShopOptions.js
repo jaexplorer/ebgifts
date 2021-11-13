@@ -51,27 +51,33 @@ const ShopOptions = ({
       </ul>
       <ul className="option">
         <li className="heading">Size</li>
-        <li
-          className={`${sizeSelected === "Small" ? "active" : ""}`}
-          onClick={() => changeSize("Small")}
-        >
-          Small
-          <span>({getOcc(sizes, "Small")})</span>
-        </li>
-        <li
-          className={`${sizeSelected === "Medium" ? "active" : ""}`}
-          onClick={() => changeSize("Medium")}
-        >
-          Medium
-          <span>({getOcc(sizes, "Medium")})</span>
-        </li>
-        <li
-          className={`${sizeSelected === "Large" ? "active" : ""}`}
-          onClick={() => changeSize("Large")}
-        >
-          Large
-          <span>({getOcc(sizes, "Large")})</span>
-        </li>
+        {!!getOcc(sizes, "Small") && (
+          <li
+            className={`${sizeSelected === "Small" ? "active" : ""}`}
+            onClick={() => changeSize("Small")}
+          >
+            Small
+            <span>({getOcc(sizes, "Small")})</span>
+          </li>
+        )}
+        {!!getOcc(sizes, "Medium") && (
+          <li
+            className={`${sizeSelected === "Medium" ? "active" : ""}`}
+            onClick={() => changeSize("Medium")}
+          >
+            Medium
+            <span>({getOcc(sizes, "Medium")})</span>
+          </li>
+        )}
+        {!!getOcc(sizes, "Large") && (
+          <li
+            className={`${sizeSelected === "Large" ? "active" : ""}`}
+            onClick={() => changeSize("Large")}
+          >
+            Large
+            <span>({getOcc(sizes, "Large")})</span>
+          </li>
+        )}
       </ul>
     </div>
   );

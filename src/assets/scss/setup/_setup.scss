@@ -67,6 +67,11 @@ button {
   &:hover {
     background-position: 100%;
     color: black;
+
+    a {
+      background-position: 100%;
+      color: black !important;
+    }
   }
   cursor: pointer;
 }

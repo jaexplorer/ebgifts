@@ -24,12 +24,9 @@ const PersonalShoppingPage = () => {
         title={"Personal Shopping"}
         backgroundImg={data.ShoppingBG.childImageSharp.fluid}
       />
-      <h1 className="container unavailable">
-        Unavailable at this time due to COVID19
-      </h1>
+      <h1 className="container unavailable">Unavailable at this time</h1>
       <p className="container unavailableText">
-        Sorry whilst in this time of uncertainty, travel rescrictions and health
-        risks I am unable to provide this service at this point in time. Please
+        Sorry I am unable to provide this service at this point in time. Please
         check back soon for updates.
       </p>
     </Layout>
