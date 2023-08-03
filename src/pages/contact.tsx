@@ -8,9 +8,6 @@ import ContactUs from "../components/layout/contact/ContactUs";
 import { useQueryParam, StringParam } from "use-query-params";
 
 const ContactPage = () => {
-  const contactUsRef = useRef<HTMLDivElement>();
-  const [message] = useQueryParam("message", StringParam);
-
   const data = useStaticQuery(graphql`
     query {
       ContactBG: file(relativePath: { eq: "BG-title-v3.jpg" }) {
@@ -36,19 +33,6 @@ const ContactPage = () => {
     contactHeader: { contactHeader },
   } = data.allContentfulContactPage.edges.map(e => e.node)[0];
 
-  const scrollToContact = () => {
-    contactUsRef.current.scrollIntoView({
-      behavior: "smooth",
-      block: "center",
-      inline: "center",
-    });
-  };
-  useEffect(() => {
-    if (message) {
-      scrollToContact();
-    }
-  }, [message]);
-
   return (
     <Layout>
       <SEO title="Contact" />
@@ -58,8 +42,8 @@ const ContactPage = () => {
         backgroundImg={data.ContactBG.childImageSharp.fluid}
       />
       <ContactInfo />
-      <div ref={contactUsRef}>
-        <ContactUs initialMessage={message || ""} />
+      <div>
+        <ContactUs />
       </div>
     </Layout>
   );
